@@ -113,6 +113,21 @@ body {
 
 /* ── CONTENT ── */
 .content { padding: 0; box-sizing: border-box; width: 100%; }
+.insight-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  border: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: transform .15s ease, box-shadow .15s ease;
+  cursor: default;
+}
+.insight-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 .tab-panel { display: none; padding: 40px; max-width: 1200px; margin: 0 auto; }
 .tab-panel.active { display: block; }
 
@@ -937,7 +952,7 @@ tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background 
     <div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:#b35a00;margin-bottom:16px;text-transform:uppercase">● O que os dados revelam</div>
     <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px">
 
-      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+      <div class="insight-card">
         <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">01</div>
         <div style="flex:1">
           <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Nov/25 distorce a leitura da rede inteira</div>
@@ -945,7 +960,7 @@ tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background 
         </div>
       </div>
 
-      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+      <div class="insight-card">
         <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">02</div>
         <div style="flex:1">
           <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Variação de 12x na média mensal entre lojas</div>
@@ -953,7 +968,7 @@ tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background 
         </div>
       </div>
 
-      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+      <div class="insight-card">
         <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">03</div>
         <div style="flex:1">
           <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Taxa de reciclagem varia de 22% a 72% entre unidades</div>
@@ -967,7 +982,7 @@ tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background 
     <div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:#b35a00;margin-bottom:16px;text-transform:uppercase">● Ações prioritárias</div>
     <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px">
 
-      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+      <div class="insight-card">
         <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">01</div>
         <div style="flex:1">
           <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Elevar Santos, Portugal e Sócrates do Tier C</div>
@@ -975,7 +990,7 @@ tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background 
         </div>
       </div>
 
-      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+      <div class="insight-card">
         <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">02</div>
         <div style="flex:1">
           <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Reduzir geração nas unidades Tier A</div>
@@ -983,7 +998,7 @@ tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background 
         </div>
       </div>
 
-      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+      <div class="insight-card">
         <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">03</div>
         <div style="flex:1">
           <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Melhorar a segregação na fonte para reduzir co-processamento</div>
@@ -998,7 +1013,7 @@ tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background 
     <div style="font-size:13px;color:var(--text-secondary);margin-bottom:16px">Dados que a Petlove pode compartilhar para enriquecer as próximas análises.</div>
     <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px">
 
-      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+      <div class="insight-card">
         <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">01</div>
         <div style="flex:1">
           <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Mercadoria recebida por CD</div>
@@ -1006,7 +1021,7 @@ tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background 
         </div>
       </div>
 
-      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+      <div class="insight-card">
         <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">02</div>
         <div style="flex:1">
           <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Histórico de pedidos / vendas</div>
@@ -1014,7 +1029,7 @@ tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background 
         </div>
       </div>
 
-      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+      <div class="insight-card">
         <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">03</div>
         <div style="flex:1">
           <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Calendário de campanhas e promoções</div>
