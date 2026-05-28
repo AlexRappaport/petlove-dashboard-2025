@@ -112,7 +112,7 @@ body {
 .tab.active { color: var(--text-primary); font-weight: 600; border-bottom-color: var(--orange-dark); }
 
 /* ── CONTENT ── */
-.content { padding: 40px; max-width: 1280px; margin: 0 auto; box-sizing: border-box; width: 100%; }
+.content { padding: 40px; box-sizing: border-box; width: 100%; }
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
@@ -319,6 +319,27 @@ tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background 
     <hr class="divider">
 
     <div class="sec">
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">Evolução da operação</div>
+          <div class="chart-insight">Rede cresceu de 10 para 13 unidades: Braz Leme e Hospital Veros em nov/25, CD Itapeva em dez/25.</div>
+        </div>
+        <div class="chart-inner">
+          <div style="position:relative;width:100%;height:240px">
+            <canvas id="cUnidadesMes" role="img" aria-label="Número de unidades ativas por mês 2025">Unidades ativas Jan-Dez 2025.</canvas>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <span><span class="leg-dot" style="background:#8AA5FF;border-radius:2px"></span>Unidades ativas</span>
+          <span><span class="leg-dot" style="background:#FFBA86;border-radius:2px"></span>Transportadores</span>
+          <span><span class="leg-dot" style="background:#b35a00;border-radius:2px"></span>Destinos Finais</span>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
       <div class="sec-title">operação completa</div>
       <div class="grid-4">
         <div class="mc" style="border-top:3px solid #888780">
@@ -344,27 +365,6 @@ tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background 
           <div class="mc-label">Rejeito + Não Rec.</div>
           <div class="mc-value" style="color:#222222">51,43</div>
           <div class="mc-sub">42% do volume total</div>
-        </div>
-      </div>
-    </div>
-
-    <hr class="divider">
-
-    <div class="sec">
-      <div class="chart-card">
-        <div class="chart-header">
-          <div class="chart-title">Evolução da operação</div>
-          <div class="chart-insight">Rede cresceu de 10 para 13 unidades: Braz Leme e Hospital Veros em nov/25, CD Itapeva em dez/25.</div>
-        </div>
-        <div class="chart-inner">
-          <div style="position:relative;width:100%;height:240px">
-            <canvas id="cUnidadesMes" role="img" aria-label="Número de unidades ativas por mês 2025">Unidades ativas Jan-Dez 2025.</canvas>
-          </div>
-        </div>
-        <div class="chart-legend">
-          <span><span class="leg-dot" style="background:#8AA5FF;border-radius:2px"></span>Unidades ativas</span>
-          <span><span class="leg-dot" style="background:#FFBA86;border-radius:2px"></span>Transportadores</span>
-          <span><span class="leg-dot" style="background:#b35a00;border-radius:2px"></span>Destinos Finais</span>
         </div>
       </div>
     </div>
