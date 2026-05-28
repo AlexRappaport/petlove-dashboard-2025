@@ -1,0 +1,1357 @@
+<!-- v2 -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petlove — Relatório de Resíduos 2025</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzY0IiBoZWlnaHQ9IjM4MCIgdmlld0JveD0iMCAwIDM2NCAzODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik04MS4wODAxIDY5Ljk0MDFDNTEuMjMyOCAxMDAuMTQgMzIuOCAxNDEuNjQ0IDMyLjggMTg3LjQ2N0MzMi44IDIzMy4yOSA1MS4yMzI4IDI3NC43OTQgODEuMDgwMSAzMDQuOTk0QzMzLjY5MjUgMjg3LjAwMiAwIDI0MS4xNjggMCAxODcuNDY3QzAgMTMzLjc2NiAzMy42OTI1IDg3LjkzMjEgODEuMDgwMSA2OS45NDAxWiIgZmlsbD0iIzIyMjIyMiIvPgo8cGF0aCBkPSJNMzYxLjQ4NSAxNDguMDEyQzM1MC45ODUgMTA2Ljg3MiAzMjQuODk1IDY5LjY5NzcgMjg1LjYxNyA0Ni4wOTc2QzI0Ni4zNDkgMjIuNDk3NCAyMDEuMjY0IDE2LjkyMjQgMTYwLjAyNSAyNi45NDg2QzE5OS44NDMgLTQuNDE5MTEgMjU2LjQ4NiAtOS42OTY2MyAzMDIuNTE4IDE3Ljk2OTFDMzQ4LjU1IDQ1LjYyMzggMzcwLjQ4NyA5OC4xMDE2IDM2MS40ODUgMTQ4LjAwMVYxNDguMDEyWiIgZmlsbD0iIzIyMjIyMiIvPgo8cGF0aCBkPSJNMzYxLjQ4NSAyMzEuMTMxQzM1MC45ODUgMjcyLjI3MiAzMjQuODk1IDMwOS40NDYgMjg1LjYxNyAzMzMuMDQ2QzI0Ni4zNDkgMzU2LjY0NiAyMDEuMjY0IDM2Mi4yMjEgMTYwLjAyNSAzNTIuMTk1QzE5OS44NDMgMzgzLjU2MyAyNTYuNDg2IDM4OC44NCAzMDIuNTE4IDM2MS4xNzVDMzQ4LjU1IDMzMy41MiAzNzAuNDg3IDI4MS4wNDIgMzYxLjQ4NSAyMzEuMTQyVjIzMS4xMzFaIiBmaWxsPSIjMjIyMjIyIi8+Cjwvc3ZnPgo=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+:root {
+  --bg:           #F5F5F5;
+  --surface:      #FFFFFF;
+  --surface-warm: #F9EDE4;
+  --surface-2:    #F0EDEA;
+  --border:       rgba(0,0,0,0.06);
+  --border-strong:rgba(0,0,0,0.12);
+  --text-primary: #222222;
+  --text-secondary:#666666;
+  --text-muted:   #999999;
+  --orange:       #FFBA86;
+  --orange-dark:  #b35a00;
+  --green:        #3D5836;
+  --green-light:  #e8f0e5;
+  --blue:         #5577dd;
+  --blue-light:   #e8edff;
+  --amber:        #b35a00;
+  --amber-light:  #fdf0e6;
+  --coral:        #993C1D;
+  --coral-light:  #fde8de;
+  --accent:       #b35a00;
+  --radius:       16px;
+  --radius-sm:    10px;
+  --mono: 'Inter', sans-serif;
+  --sans: 'Inter', sans-serif;
+  --serif: 'Libre Caslon Text', serif;
+}
+
+/* residuo colors */
+:root {
+  --res-reciclavel:  #3D5836;
+  --res-papelao:     #5A7A4F;
+  --res-organico:    #884D20;
+  --res-rejeito:     #171C32;
+  --res-naorec:      #222222;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.header {
+  background: var(--text-primary);
+  color: #fff;
+  padding: 28px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-left { display: flex; align-items: center; gap: 20px; }
+.header-logo {
+  width: 40px; height: 40px;
+  background: var(--orange-dark);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.header-logo svg { width: 22px; height: 22px; fill: #fff; }
+.header-title { font-family: var(--serif); font-size: 18px; font-weight: 400; }
+.header-subtitle { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+.header-period {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+/* ── TABS ── */
+.tabs {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  display: flex;
+  gap: 0;
+}
+.tab {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 0 16px;
+  height: 48px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color .15s, border-color .15s;
+  white-space: nowrap;
+}
+.tab:hover { color: var(--text-primary); }
+.tab.active { color: var(--text-primary); font-weight: 600; border-bottom-color: var(--orange-dark); }
+
+/* ── CONTENT ── */
+.content { padding: 36px 40px; max-width: 1100px; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── SECTION ── */
+.sec { margin-bottom: 36px; }
+.sec-title {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 14px;
+}
+
+/* ── METRIC CARDS ── */
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+.mc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  transition: transform .15s ease, box-shadow .15s ease;
+  cursor: default;
+}
+.mc:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+.mc-label { font-size: 11px; font-weight: 500; color: var(--text-muted); margin-bottom: 8px; line-height: 1.4; text-transform: uppercase; letter-spacing: .04em; }
+.mc-value { font-family: var(--serif); font-size: 28px; font-weight: 400; color: var(--text-primary); line-height: 1; }
+.mc-sub { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+
+.mc-accent-green { border-left: 3px solid var(--green); }
+.mc-accent-blue  { border-left: 3px solid var(--blue); }
+.mc-accent-amber { border-left: 3px solid var(--orange-dark); }
+.mc-accent-coral { border-left: 3px solid var(--coral); }
+
+/* ── DIVIDER ── */
+.divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+
+/* ── TABLE ── */
+.table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th {
+  font-family: var(--sans);
+  font-size: 10px !important; font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  text-align: left;
+  padding: 12px 16px;
+  background: #F9EDE4;
+  border-bottom: 1px solid var(--border);
+}
+tbody td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text-primary); vertical-align: middle; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr.total-row td { font-weight: 600; background: var(--surface-2); }
+tbody tr:not(.total-row):hover td { background: #F9EDE4; transition: background .15s ease; }
+.num { text-align: right; font-size: 12px; }
+
+/* ── BADGES ── */
+.badge {
+  display: inline-block;
+  font-size: 10px; font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+.badge-green  { background: var(--green-light);  color: var(--green); }
+.badge-blue   { background: var(--blue-light);   color: var(--blue); }
+.badge-amber  { background: var(--amber-light);  color: var(--amber); }
+.badge-coral  { background: var(--coral-light);  color: var(--coral); }
+.badge-gray   { background: var(--surface-2);    color: var(--text-secondary); }
+.badge-purple { background: #EDE9FE; color: #4C1D95; }
+.badge-teal   { background: #CCFBF1; color: #0F766E; }
+
+/* ── BAR ── */
+.bar-wrap { background: var(--surface-2); border-radius: 3px; height: 5px; margin-top: 5px; overflow: hidden; width: 100px; display: inline-block; vertical-align: middle; margin-left: 8px; }
+.bar-fill { height: 5px; border-radius: 3px; display: block; }
+
+/* ── CHARTS ── */
+.chart-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: transform .15s ease, box-shadow .15s ease;
+  cursor: default;
+}
+.chart-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.chart-header { margin-bottom: 16px; }
+.chart-title { font-family: 'Libre Caslon Text', serif; font-size: 17px; font-weight: 400; color: var(--text-primary); margin-bottom: 4px; }
+.chart-insight { font-size: 12px; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0; }
+.chart-inner { background: #F9EDE4; border-radius: 10px; padding: 20px; position: relative; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; font-size: 12px; color: var(--text-secondary); }
+.chart-legend span { display: flex; align-items: center; gap: 6px; }
+.chart-sub { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+/* ── LEGEND ── */
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 11px; color: var(--text-secondary); margin-top: 14px; }
+.leg-dot { width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 5px; vertical-align: middle; }
+
+/* ── TIER CARDS ── */
+.tier-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.tc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .15s ease, box-shadow .15s ease;
+  cursor: default;
+}
+.tc:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+.tc-units { font-size: 12px; color: var(--text-secondary); line-height: 2; margin-top: 8px; }
+.tc-name { color: var(--text-primary); }
+.tc-vol { font-size: 11px; color: var(--text-muted); }
+
+/* ── DONUT LAYOUT ── */
+.donut-layout { display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: center; }
+.donut-legend-item { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; margin-bottom: 16px; line-height: 1.4; white-space: nowrap; }
+.donut-legend-item small { font-size: 11px; color: var(--text-muted); display: block; margin-top: 2px; white-space: nowrap; }
+
+/* ── COMING SOON ── */
+.coming-soon {
+  background: var(--surface);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  padding: 60px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+.coming-soon span { font-size: 11px; display: block; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<div style="background:#fff;border-bottom:1px solid rgba(0,0,0,0.07);padding:10px 40px;display:flex;align-items:center;gap:12px">
+  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTM4NiIgaGVpZ2h0PSIzODAiIHZpZXdCb3g9IjAgMCAxMzg2IDM4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTYxOS41MzYgMjIyLjgyM0w1MzguMzEzIDU4LjYxMzdINDkwLjQzVjMxNi41NzRINTE2LjI4OVY3Mi40NzQxTDU5My4wOTQgMjMxLjEzMUg2NDYuMDY3TDcyMi43NzMgNzIuNDc0MVYzMTYuNTc0SDc0OC42MzJWNTguNjEzN0g3MDAuNzQ5TDYxOS41MjUgMjIyLjgyM0g2MTkuNTM2WiIgZmlsbD0iIzIyMjIyMiIvPgo8cGF0aCBkPSJNOTQxLjg2OSAyMTUuNjUxQzk0MS44NjkgMjM5LjM5NSA5MzUuNTg5IDI1OC40IDkyMy4wNCAyNzIuNjQ2QzkxMC40OTEgMjg2LjkwMyA4OTMuNTU2IDI5NC4wMSA4NzIuMjgxIDI5NC4wMUM4NTUuNzg3IDI5NC4wMSA4NDMuMTE3IDI4OC43MzIgODM0LjI0NyAyNzguMTc3QzgyNS4zNjcgMjY3LjYyMiA4MjAuOTM4IDI1Mi40NTEgODIwLjkzOCAyMzIuNjYzVjExNS44OTZINzk1LjgzOVYyMzcuNDExQzc5NS44MzkgMjYyLjQ4OCA4MDEuNjY4IDI4Mi42MDcgODEzLjMzNiAyOTcuNzc4QzgyNC45OTIgMzEyLjk1IDg0Mi44NjMgMzIwLjU0MSA4NjYuOTU5IDMyMC41NDFDODg2LjczNiAzMjAuNTQxIDkwNy45NjggMzE0LjQ5MiA5MjEuMjExIDMwMy40ODVDOTM0LjQ1NCAyOTIuNDc4IDkzNy45MTQgMjg2LjY4MyA5NDEuODY5IDI3Ny40MzlWMzE2LjU3NEg5NjcuMzQzVjExNS45MDdIOTQxLjg2OVYyMTUuNjUxWiIgZmlsbD0iIzIyMjIyMiIvPgo8cGF0aCBkPSJNMTE0OS4yMyAyMjIuNTE0QzExMzcuNyAyMTQuOTg5IDExMjMuMDUgMjA5LjY1NiAxMTA1LjMxIDIwNi40ODNMMTA3Ny45NCAyMDEuMzM4QzEwNjIuMjIgMTk4LjQ0IDEwNTEuMjUgMTk0LjY3MiAxMDQ1LjA1IDE5MC4wNjdDMTAzOC44MyAxODUuNDUgMTAzNS43MyAxNzguNTMxIDEwMzUuNzMgMTY5LjI4N0MxMDM1LjczIDE1OC43MzIgMTA0MC4wMyAxNTAuNTU3IDEwNDguNjUgMTQ0LjczOUMxMDU3LjI3IDEzOC45NDQgMTA2OC42NyAxMzYuMDM1IDEwODIuODcgMTM2LjAzNUMxMTAwLjEgMTM2LjAzNSAxMTEzLjU0IDE0MC4wMDIgMTEyMy4xOSAxNDcuOTEzQzExMzIuOCAxNTUuODIzIDExMzcuODggMTY2LjY0MyAxMTM4LjQgMTgwLjM3MUgxMTY0LjYzQzExNjMuNjIgMTU5LjAwOCAxMTU2LjIxIDE0Mi4yMzggMTE0Mi4zOSAxMzAuMDk3QzExMjguNTcgMTE3Ljk1NSAxMTA5LjI0IDExMS44OTUgMTA4NC4zOSAxMTEuODk1QzEwNjIuMzMgMTExLjg5NSAxMDQ0LjQ2IDExNi44NDIgMTAzMC43NyAxMjYuNzM2QzEwMTcuMDcgMTM2LjYzIDEwMTAuMjQgMTUwLjk1MyAxMDEwLjI0IDE2OS42ODRDMTAxMC4yNCAxODcuMzY3IDEwMTUuMzEgMjAwLjAyNyAxMDI1LjQ2IDIwNy42ODRDMTAzNS41OSAyMTUuMzQyIDEwNTAuMTcgMjIxLjAwNSAxMDY5LjE5IDIyNC43MDdMMTA5OC44NSAyMzAuMjQ5QzExMTQuODIgMjMzLjQxMSAxMTI1Ljg1IDIzNy4zNzcgMTEzMS45MiAyNDIuMTI2QzExMzguMDIgMjQ2Ljg3NSAxMTQxLjA1IDI1My44NzEgMTE0MS4wNSAyNjMuMTA0QzExNDEuMDUgMjczLjkyMyAxMTM2Ljc0IDI4Mi4xNzYgMTEyOC4xMiAyODcuODVDMTExOS41MSAyOTMuNTI0IDExMDcuNzIgMjk2LjM1NSAxMDkyLjc1IDI5Ni4zNTVDMTA3NS4yNiAyOTYuMzU1IDEwNjAuOTMgMjkyLjM0NSAxMDQ5Ljc3IDI4NC4yOEMxMDM4LjYxIDI3Ni4yMzcgMTAzMi45MiAyNjUuMzUxIDEwMzIuNjYgMjUxLjYyM0gxMDA2LjhDMTAwNy4zMSAyNzIuNzMzIDEwMTUuMjMgMjg5LjQ5MSAxMDMwLjU4IDMwMS44OTdDMTA0NS45MSAzMTQuMzA0IDEwNjYuMTMgMzIwLjQ5NiAxMDkxLjIzIDMyMC40OTZDMTExMy44IDMyMC40OTYgMTEzMS45OSAzMTUuNTQ4IDExNDUuOCAzMDUuNjU0QzExNTkuNjIgMjk1Ljc2MSAxMTY2LjU0IDI4MS40MzcgMTE2Ni41NCAyNjIuNzA3QzExNjYuNTQgMjQzLjk3NyAxMTYwLjc3IDIzMC4wNSAxMTQ5LjI0IDIyMi41MjVMMTE0OS4yMyAyMjIuNTE0WiIgZmlsbD0iIzIyMjIyMiIvPgo8cGF0aCBkPSJNMTM3OC4zNyAyOTAuMDA5QzEzNzQuNTYgMjkwLjAwOSAxMzcxLjU5IDI4OS40MTQgMTM3MC4wNiAyODcuNTYzQzEzNjguNTUgMjg1LjcxMiAxMzY4LjA5IDI4Mi4wOTggMTM2OC4wOSAyNzcuMzVWMTg5Ljg3OUMxMzY4LjA5IDEzNy44ODYgMTMzOS45NSAxMTEuODk1IDEyODMuNjcgMTExLjg5NUMxMjU5LjU3IDExMS44OTUgMTI0MC4xMyAxMTguNDI5IDEyMjUuMyAxMzEuNDk2QzEyMTAuNDcgMTQ0LjU1MiAxMjAyLjUzIDE2Mi45NjMgMTIwMS41MiAxODYuNzE3SDEyMjcuMzhDMTIzMC42NyAxNTIuNjgzIDEyNTAuMDYgMTM1LjY2MSAxMjg1LjU2IDEzNS42NjFDMTMwNC41NyAxMzUuNjYxIDEzMTguODkgMTQwLjM1NCAxMzI4LjUzIDE0OS43MTlDMTMzOC4xNiAxNTkuMDk2IDEzNDIuOTkgMTcxLjY4OSAxMzQyLjk5IDE4Ny41MjJDMTM0Mi45OSAxOTMuODQ2IDEzMzcuMzQgMTk3Ljg3OCAxMzI2LjA2IDE5OS41OTdDMTMxNC43NyAyMDEuMzE2IDEyOTcuNDcgMjAyLjQ0IDEyNzQuMTYgMjAyLjk1OEMxMjUxLjM0IDIwMy40ODYgMTIzMy4wOSAyMDguMzAxIDEyMTkuMzkgMjE3LjQxM0MxMjA1LjY5IDIyNi41MjUgMTE5OC44NiAyNDAuNDQgMTE5OC44NiAyNTkuMTgxQzExOTguODYgMjc3LjkyMyAxMjA1LjI1IDI5Mi44MTkgMTIxOC4wNiAzMDMuOTE0QzEyMzAuODYgMzE0Ljk5OCAxMjQ3LjQxIDMyMC41MjkgMTI2Ny42OCAzMjAuNTI5QzEyODUuNDIgMzIwLjUyOSAxMzAzLjQ3IDMxNy4wNTggMTMxNy4zMSAzMDguODVDMTMzMS41IDMwMC40MjEgMTM0MS41NiAyODUuOTk5IDEzNDMuMzYgMjc3LjM5NFYyOTIuMDkyQzEzNDMuMzYgMzA1LjYxIDEzNTQuMzQgMzE2LjU4NCAxMzY3Ljg2IDMxNi41ODRIMTM4NS45NlYyOTAuMDc1SDEzNzguMzZWMjkwLjAzMUwxMzc4LjM3IDI5MC4wMDlaTTEzNDMgMjQ0LjA5OEMxMzQzIDI1NC4zODkgMTMzOS41MiAyNjMuNSAxMzMyLjU0IDI3MS40MTFDMTMyNS41NiAyNzkuMzIyIDEzMTYuNTEgMjg1LjQwNCAxMzA1LjM1IDI4OS42MTNDMTI5NC4xOSAyOTMuODQzIDEyODIuNzkgMjk2LjA5MSAxMjcxLjEzIDI5Ni4zNDRDMTI1Ni45MyAyOTYuMzQ0IDEyNDUuNTIgMjkzLjE4MiAxMjM2LjkxIDI4Ni44MzZDMTIyOC4yOSAyODAuNTEyIDEyMjMuOTggMjcxLjQgMTIyMy45OCAyNTkuNTIzQzEyMjMuOTggMjM5Ljk5OSAxMjM4LjE5IDIyOC45MTUgMTI2Ni41NyAyMjYuMjcxQzEyNjYuNTcgMjI2LjI3MSAxMzA1LjYgMjIzLjYzOCAxMzA5LjkxIDIyMy4xMDlDMTMwOS45MSAyMjMuMTA5IDEzMjYuMiAyMjIuMTE3IDEzMzguNzYgMjIwLjQ5OEMxMzQxIDIyMC4yIDEzNDMgMjIxLjk2MyAxMzQzIDIyNC4yMzNWMjQ0LjA4N1YyNDQuMDk4WiIgZmlsbD0iIzIyMjIyMiIvPgo8cGF0aCBkPSJNODEuMDgwMSA2OS45NEM1MS4yMzI4IDEwMC4xNCAzMi44IDE0MS42NDQgMzIuOCAxODcuNDY3QzMyLjggMjMzLjI5IDUxLjIzMjggMjc0Ljc5NCA4MS4wODAxIDMwNC45OTRDMzMuNjkyNSAyODcuMDAyIDAgMjQxLjE2OCAwIDE4Ny40NjdDMCAxMzMuNzY2IDMzLjY5MjUgODcuOTMyMSA4MS4wODAxIDY5Ljk0WiIgZmlsbD0iIzIyMjIyMiIvPgo8cGF0aCBkPSJNMzYxLjQ4NSAxNDguMDEyQzM1MC45ODUgMTA2Ljg3MiAzMjQuODk1IDY5LjY5NzcgMjg1LjYxNyA0Ni4wOTc2QzI0Ni4zNDkgMjIuNDk3NCAyMDEuMjY0IDE2LjkyMjQgMTYwLjAyNSAyNi45NDg2QzE5OS44NDMgLTQuNDE5MTEgMjU2LjQ4NiAtOS42OTY2MyAzMDIuNTE4IDE3Ljk2OTFDMzQ4LjU1IDQ1LjYyMzggMzcwLjQ4NyA5OC4xMDE2IDM2MS40ODUgMTQ4LjAwMVYxNDguMDEyWiIgZmlsbD0iIzIyMjIyMiIvPgo8cGF0aCBkPSJNMzYxLjQ4NSAyMzEuMTMxQzM1MC45ODUgMjcyLjI3MiAzMjQuODk1IDMwOS40NDYgMjg1LjYxNyAzMzMuMDQ2QzI0Ni4zNDkgMzU2LjY0NiAyMDEuMjY0IDM2Mi4yMjEgMTYwLjAyNSAzNTIuMTk1QzE5OS44NDMgMzgzLjU2MyAyNTYuNDg2IDM4OC44NCAzMDIuNTE4IDM2MS4xNzVDMzQ4LjU1IDMzMy41MiAzNzAuNDg3IDI4MS4wNDIgMzYxLjQ4NSAyMzEuMTQyVjIzMS4xMzFaIiBmaWxsPSIjMjIyMjIyIi8+Cjwvc3ZnPgo=" alt="Musa" style="height:20px;display:block">
+  <span style="font-size:12px;color:#999;font-family:'Inter',sans-serif;font-weight:400;letter-spacing:0.02em">Dashboard Gestão de Resíduos</span>
+</div>
+
+<div style="background:#fff;border-bottom:1px solid rgba(0,0,0,0.08);padding:0 40px 0 40px;display:flex;align-items:center;justify-content:space-between;height:48px">
+  <div style="display:flex;align-items:center;gap:0;margin-left:-14px">
+    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDIwMDEwOTA0Ly9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9UUi8yMDAxL1JFQy1TVkctMjAwMTA5MDQvRFREL3N2ZzEwLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4wIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiB3aWR0aD0iMTI4MC4wMDAwMDBwdCIgaGVpZ2h0PSI3MjAuMDAwMDAwcHQiIHZpZXdCb3g9IjAgMCAxMjgwLjAwMDAwMCA3MjAuMDAwMDAwIgogcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCI+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjAwMDAwMCw3MjAuMDAwMDAwKSBzY2FsZSgwLjEwMDAwMCwtMC4xMDAwMDApIgpmaWxsPSIjMDAwMDAwIiBzdHJva2U9Im5vbmUiPgo8cGF0aCBkPSJNNTkwNSA0NTU2IGMtMTE4IC0yNyAtMjUxIC05NCAtMzA2IC0xNTMgLTgyIC04OCAtNjAgLTE3NSA0OSAtMTkyCjkwIC0xNCA4NiAzIDg1IC0zNTMgMCAtMjA3IC00IC0zMjcgLTEyIC0zNTYgLTcgLTI0IC0zMSAtNjMgLTU1IC05MSAtNTAgLTU2Ci02MyAtMTA5IC01MSAtMjA2IDE1IC0xMTkgNzcgLTE0OCAzMDUgLTE0OCAxNjcgMCAyMzkgMTQgMjg1IDU1IDc4IDY3IDc1IDIyNQotNSAzMTIgLTIyIDIzIC00NCA1NSAtNTAgNzAgLTE0IDM5IC0xMiAyNTcgNSA0ODYgMjggMzgzIDMwIDQ0NSAxMSA0OTMgLTMwCjc5IC0xMzQgMTEyIC0yNjEgODN6Ii8+CjxwYXRoIGQ9Ik0xMDA4OSA0NTQzIGMtNzYgLTM5IC0xMTQgLTEwMiAtMTEzIC0xODggMCAtNjcgMjIgLTExOCAxMTkgLTI5MCAyNAotNDQgNTIgLTEwMiA2MSAtMTMwIDI4IC04NiA2MiAtMTM1IDEwNyAtMTU2IDU0IC0yNCA4NCAtMjQgMTUwIDEgMTg1IDY5IDM4NwozNjkgMzg3IDU3NSAwIDg4IC01NCAxNTUgLTEyNSAxNTUgLTQwIDAgLTEyNCAtNDEgLTE1NSAtNzUgLTQ5IC01MiAtNTMgLTUyCi0xMjkgMjQgLTUxIDUxIC04MyA3NCAtMTI1IDkwIC03NSAyOCAtMTEyIDI3IC0xNzcgLTZ6Ii8+CjxwYXRoIGQ9Ik01MDgwIDQzNDEgYy0zMCAtMTAgLTk1IC00MCAtMTQ1IC02OCAtNDkgLTI3IC0xMzIgLTcxIC0xODMgLTk4Ci0xMTYgLTYwIC0xMjYgLTc1IC0xMjUgLTIwMSAxIC01MCA2IC0xMDEgMTMgLTExMyAxMyAtMjYgNDggLTQxIDk1IC00MSAxOSAwCjM3IC01IDQxIC0xMiAxMCAtMTYgOCAtMTA2IC03IC0yNjQgLTE4IC0xOTQgNCAtMjgzIDk0IC0zODEgMTExIC0xMjEgMzM4Ci0xNjAgNDkxIC04NCAxMTAgNTQgMTU5IDEzNSAxNjAgMjY3IDEgMTE2IDAgMTE3IC0xMzkgMTA4IC0xMDggLTYgLTExMiAtNgotMTM5IDE4IC0zMSAyNiAtMzEgMjggLTI4IDIxMSBsMiA4NyAxMTUgMCBjNjMgMCAxMjUgNSAxMzkgMTEgMzQgMTYgNDYgNTAgNTUKMTYwIDkgMTEzIDUgMTY5IC0xMyAxODcgLTE4IDE4IC04MCAzMSAtMTQ5IDMyIC00OCAwIC02MiA0IC04MiAyNSAtMTUgMTQgLTI1CjM2IC0yNSA1MiAwIDUzIC0xOSA5OSAtNDYgMTExIC0zMyAxNiAtNTggMTQgLTEyNCAtN3oiLz4KPHBhdGggZD0iTTI3NzQgNDI1MCBjLTU4IC0xOCAtMTI4IC03NCAtMTcyIC0xMzggLTM0IC00OCAtNDkgLTYyIC02NiAtNjAgLTExCjIgLTIyIDEwIC0yMyAxOCAtMTMgMTAzIC00NSAxNTAgLTExNyAxNzAgLTE5OCA1NSAtNDY1IC0xOTggLTM4MSAtMzYwIDE1IC0zMAo0NCAtNDIgMTI3IC01NSAyNCAtNCA0MiAtMTQgNDkgLTI3IDggLTE2IDExIC0xMjAgMTAgLTM1NiAtMSAtMzcwIDEgLTM1OCAtNzAKLTQyNyAtNDcgLTQ1IC02MSAtODQgLTYxIC0xNzAgMCAtMTA0IDQ0IC0xNDggMTg2IC0xODYgNjEgLTE2IDExMiAtMjEgMjI0Ci0yMyAxNTggLTEgMTkwIDggMjMxIDY0IDQ4IDY0IDMxIDE4MyAtMzMgMjQwIC0xMDYgOTQgLTEwOCA5NiAtMTA4IDEzOCAwIDQyCjE5IDcyIDQ2IDcyIDkgMCAzMCAtMTEgNDggLTI1IDU1IC00MiAxMDAgLTU1IDE4OCAtNTUgMjc4IDEgNDQwIDE2OCA0NzggNDk0CjM2IDMwNyAtNjkgNTY2IC0yNjcgNjU5IC01OSAyNyAtODAgMzIgLTE2MyAzNCAtNTIgMSAtMTA5IC0yIC0xMjYgLTd6IG00MAotNDE1IGM2MSAtNjEgMTAzIC0yNDYgNzQgLTMzMCAtMTggLTU0IC02NiAtODUgLTEzMCAtODUgLTk2IDAgLTEzNSA0NSAtMTU3CjE4MCAtMzAgMTgyIDEzIDI3MCAxMzEgMjcwIDQxIDAgNTIgLTUgODIgLTM1eiIvPgo8cGF0aCBkPSJNNjc0MCA0MjQ0IGMtMjA4IC00NCAtMzU5IC0yMDEgLTQwNSAtNDE5IC0yMCAtOTQgLTE5IC0yODcgMSAtMzc4CjQ5IC0yMTcgMTg5IC0zNTggNDA0IC00MDMgOTMgLTIwIDI4NyAtMTQgMzcwIDExIDE5MiA1OCAzMTkgMTk4IDM2NCA0MDIgMjAKOTEgMjEgMjc1IDEgMzY4IC0zMyAxNTcgLTEzMyAyOTkgLTI1NSAzNjQgLTEyNSA2NyAtMzIyIDkwIC00ODAgNTV6IG0yMTQKLTM2NSBjNjQgLTUxIDEzMSAtMjM1IDEyNCAtMzQzIC0zIC00NiAtMTAgLTcxIC0yMyAtODcgLTQ1IC01MCAtMTQ0IC02NSAtMjAyCi0yOSAtODMgNTAgLTE0MyAyOTggLTk5IDQwNSAyOSA3MCAxNDEgMTAwIDIwMCA1NHoiLz4KPHBhdGggZD0iTTkyMjUgNDI0NSBjLTE2MiAtNDQgLTI4MSAtMTQxIC0zNTUgLTI5MSAtOTIgLTE4NyAtOTMgLTQ2NyAtMyAtNjM3CjQxIC03NyAxNTUgLTE4NiAyMzMgLTIyNCAxNjggLTgwIDQwMiAtODQgNTY3IC04IDk3IDQ0IDE2OCAxMjIgMTkzIDIxMSAxMSAzOQoxMSA1MCAtMyA3OSAtMjUgNTMgLTY5IDYwIC0yMjQgNDAgLTEwNSAtMTUgLTE0MCAtMTUgLTIxNiAtNiAtMTQxIDE4IC0yMjAgNjUKLTIwMiAxMjAgNSAxOCAxOSAxOSAzMDMgMjMgMjczIDMgMzAwIDUgMzM3IDIzIDUwIDI1IDY0IDYxIDY0IDE3MSAxIDk1IC0yNgoyMTMgLTY1IDI4NSAtNTYgMTAzIC0xODEgMTkwIC0zMTIgMjE4IC03MiAxNSAtMjU1IDEzIC0zMTcgLTR6IG0yNTAgLTIzNCBjNTAKLTIyIDkxIC02OSAxMDYgLTEyMiAyOSAtOTQgLTI4IC0xMjcgLTIyNyAtMTMxIC0xMDQgLTIgLTExOCAwIC0xMzAgMTcgLTE3IDIyCi0xOCA3NSAtMyAxMjggMjggMTAzIDE1MSAxNTUgMjU0IDEwOHoiLz4KPHBhdGggZD0iTTM5MDMgNDIzOSBjLTI3MCAtNDUgLTQ1MCAtMjY4IC00NzAgLTU4NCAtMjAgLTMxNSAxMzYgLTU0NiA0MTkKLTYyMiA3OCAtMjEgMjYwIC0yMyAzMzggLTQgMTM0IDMzIDIzNiAxMDYgMjg1IDIwNCAzMiA2NSAzMiAxMDggMSAxNDQgLTI0IDI4Ci0yNSAyOCAtMTIzIDI0IC0yNDQgLTEwIC0zNTcgLTYgLTQxMCAxMiAtODEgMjggLTEyMSA5MCAtNzkgMTE5IDYgNCAxMzggOAoyOTMgOCAzODcgMCAzOTMgMyAzOTMgMTg5IDAgMTY3IC00MiAyODQgLTEzNCAzNzYgLTExNCAxMTQgLTMxNiAxNjcgLTUxMyAxMzR6Cm0yMTUgLTI1MCBjNTMgLTI2IDkzIC04MyA5OSAtMTQyIDQgLTM2IDEgLTQ4IC0xNyAtNjUgLTI4IC0yNiAtMTE5IC00MiAtMjM3Ci00MiAtMTA5IDAgLTExOCA3IC0xMTcgODkgMSA2MSAxOCAxMDMgNTcgMTM5IDQ5IDQ2IDE0NCA1NSAyMTUgMjF6Ii8+CjxwYXRoIGQ9Ik03NzQyIDQyMjkgYy0xNDUgLTEzIC0xOTEgLTUyIC0yMDAgLTE2NyAtNyAtOTggMyAtMTM1IDQ4IC0xODcgMzYKLTQxIDUwIC03NyAxMzYgLTM0MyAxMTQgLTM1MSAxMjkgLTM4NyAxNzcgLTQyOSA0NSAtNDAgOTEgLTQ2IDI5MyAtNDEgMTc1IDQKMTg5IDkgMjI3IDkwIDE0IDI5IDYyIDE1NyAxMDcgMjgzIDEyMiAzNDAgMTU0IDQyMCAxODggNDYzIDQ0IDU1IDU0IDg3IDU1CjE3MiAxIDEzNyAtMjYgMTU1IC0yMzMgMTU1IC0xMjUgMCAtMTUwIC0zIC0xODQgLTIwIC01NCAtMjcgLTc1IC02MCAtODAgLTEyMwotNSAtNzQgMTAgLTEzMCA0NyAtMTc3IDI2IC0zMiAzMiAtNDkgMzIgLTg1IC0xIC01NCAtODIgLTMzNCAtMTA2IC0zNjMgLTI5Ci0zNyAtNDUgLTcgLTg4IDE3MSAtNTggMjM5IC01NyAyMzEgLTI3IDI3MiA0MiA1NyA0OCA4MSA0NCAxNjcgLTQgOTggLTIzIDEyNQotMTAzIDE0OCAtNjAgMTggLTIxOCAyNCAtMzMzIDE0eiIvPgo8L2c+Cjwvc3ZnPgo=" alt="Petlove" style="width:110px;height:auto;display:block;margin-right:32px">
+    <button class="tab active" onclick="showTab('visao-geral')" style="padding:0 16px;height:48px;margin:0">Visão Geral</button>
+    <button class="tab" onclick="showTab('unidades')" style="padding:0 16px;height:48px;margin:0">Índice de Geração</button>
+    <button class="tab" onclick="showTab('residuos')" style="padding:0 16px;height:48px;margin:0">Taxa de Reciclagem</button>
+    <button class="tab" onclick="showTab('indice')" style="padding:0 16px;height:48px;margin:0">Impacto Ambiental</button>
+    <button class="tab" onclick="showTab('insights')" style="padding:0 16px;height:48px;margin:0">Insights</button>
+  </div>
+  <span style="font-size:12px;color:#999;white-space:nowrap">Jan – Dez 2025 · 13 unidades</span>
+</div>
+
+<div class="content">
+
+  <!-- ══════════════════════════════════════════
+       ABA 1 — VISÃO GERAL
+  ══════════════════════════════════════════ -->
+  <div class="tab-panel active" id="tab-visao-geral">
+
+    <div style="margin-bottom:28px">
+      <h1 style="font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222;margin-bottom:4px">Visão Geral</h1>
+      <p style="font-size:13px;color:#666">Gestão de Resíduos · Jan – Dez 2025 · 13 unidades</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title">estrutura operacional</div>
+      <div class="grid-4">
+        <div class="mc">
+          <div class="mc-label">Unidades ativas</div>
+          <div class="mc-value" style="color:#b35a00">13</div>
+          <div class="mc-sub">11 lojas · 1 Hub · 1 CD</div>
+        </div>
+        <div class="mc">
+          <div class="mc-label">Total de Coletas</div>
+          <div class="mc-value" style="color:#b35a00">3.292</div>
+          <div class="mc-sub">em 2025</div>
+        </div>
+        <div class="mc">
+          <div class="mc-label">Transportadores</div>
+          <div class="mc-value">8</div>
+          <div class="mc-sub">ativos na operação · 2025</div>
+        </div>
+        <div class="mc">
+          <div class="mc-label">Destinos Finais</div>
+          <div class="mc-value">14</div>
+          <div class="mc-sub">ativos na operação · 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div class="sec-title">operação completa</div>
+      <div class="grid-4">
+        <div class="mc" style="border-top:3px solid #888780">
+          <span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#ebebeb;color:#888780;margin-bottom:8px">Total</span>
+          <div class="mc-label">Operação completa</div>
+          <div class="mc-value" style="color:#222222">123,29</div>
+          <div class="mc-sub">toneladas em 2025</div>
+        </div>
+        <div class="mc" style="border-top:3px solid #8AA5FF">
+          <span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#e0e8ff;color:#5577dd;margin-bottom:8px">Reciclagem</span>
+          <div class="mc-label">Reciclável + Papelão</div>
+          <div class="mc-value" style="color:#222222">47,93</div>
+          <div class="mc-sub">39% do volume total</div>
+        </div>
+        <div class="mc" style="border-top:3px solid #FFBA86">
+          <span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#fff4eb;color:#b35a00;margin-bottom:8px">Compostagem</span>
+          <div class="mc-label">Orgânico</div>
+          <div class="mc-value" style="color:#222222">23,93</div>
+          <div class="mc-sub">19% do volume total</div>
+        </div>
+        <div class="mc" style="border-top:3px solid #b35a00">
+          <span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#fdf0e6;color:#b35a00;margin-bottom:8px">Co-processamento</span>
+          <div class="mc-label">Rejeito + Não Rec.</div>
+          <div class="mc-value" style="color:#222222">51,43</div>
+          <div class="mc-sub">42% do volume total</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">Evolução da operação</div>
+          <div class="chart-insight">Rede cresceu de 10 para 13 unidades: Braz Leme e Hospital Veros em nov/25, CD Itapeva em dez/25.</div>
+        </div>
+        <div class="chart-inner">
+          <div style="position:relative;width:100%;height:240px">
+            <canvas id="cUnidadesMes" role="img" aria-label="Número de unidades ativas por mês 2025">Unidades ativas Jan-Dez 2025.</canvas>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <span><span class="leg-dot" style="background:#8AA5FF;border-radius:2px"></span>Unidades ativas</span>
+          <span><span class="leg-dot" style="background:#FFBA86;border-radius:2px"></span>Transportadores</span>
+          <span><span class="leg-dot" style="background:#b35a00;border-radius:2px"></span>Destinos Finais</span>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">Volume mensal por tipo de resíduo</div>
+          <div class="chart-insight">Pico em nov/25 coincide com Black November. Aumento de consumo nas lojas pode explicar o crescimento no período.</div>
+        </div>
+        <div class="chart-inner">
+          <div id="heatmapGeral" style="width:100%"></div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">Composição do volume por destinação</div>
+          <div class="chart-insight">Reciclável e Papelão somam 39% do volume, base sólida para reciclagem. Co-processamento representa 42% do total.</div>
+        </div>
+        <div style="overflow:hidden;border-radius:10px;border:1px solid rgba(0,0,0,0.06)">
+          <table style="width:100%;border-collapse:collapse;font-size:13px">
+            <thead>
+              <tr>
+                <th style="font-size:10px;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:12px 16px;background:#F9EDE4;border-bottom:1px solid rgba(0,0,0,0.08)">Resíduo</th>
+                <th style="font-size:10px;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:12px 16px;background:#F9EDE4;border-bottom:1px solid rgba(0,0,0,0.08);min-width:140px">Destinação</th>
+                <th style="font-size:10px;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:12px 16px;background:#F9EDE4;border-bottom:1px solid rgba(0,0,0,0.08)">Vol. coletado (ton)</th>
+                <th style="font-size:10px;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:12px 16px;background:#F9EDE4;border-bottom:1px solid rgba(0,0,0,0.08)">% do total</th>
+                <th style="font-size:10px;font-weight:600;color:#999;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:12px 16px;background:#F9EDE4;border-bottom:1px solid rgba(0,0,0,0.08)">Coletas realizadas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);color:#222">Rejeito</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);min-width:140px"><span class="badge" style="background:#fdf0e6;color:#b35a00;padding:3px 12px;white-space:nowrap">Co-processamento</span></td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:left;font-size:12px">47,00</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);font-size:12px"><div style="display:flex;align-items:center;gap:8px"><span style="min-width:28px">38%</span><div style="flex:1;background:rgba(0,0,0,0.06);border-radius:3px;height:5px;overflow:hidden"><div style="width:38%;height:100%;background:#b35a00;border-radius:3px"></div></div></div></td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:left;font-size:12px">1.370</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);color:#222">Reciclável</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);min-width:140px"><span class="badge" style="background:#e8eeff;color:#8AA5FF;padding:3px 12px">Reciclagem</span></td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:left;font-size:12px">24,52</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);font-size:12px"><div style="display:flex;align-items:center;gap:8px"><span style="min-width:28px">20%</span><div style="flex:1;background:rgba(0,0,0,0.06);border-radius:3px;height:5px;overflow:hidden"><div style="width:20%;height:100%;background:#8AA5FF;border-radius:3px"></div></div></div></td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:left;font-size:12px">822</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);color:#222">Orgânico</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);min-width:140px"><span class="badge" style="background:#fff0e6;color:#b35a00;padding:3px 12px;white-space:nowrap">Compostagem</span></td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:left;font-size:12px">23,93</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);font-size:12px"><div style="display:flex;align-items:center;gap:8px"><span style="min-width:28px">19%</span><div style="flex:1;background:rgba(0,0,0,0.06);border-radius:3px;height:5px;overflow:hidden"><div style="width:19%;height:100%;background:#FFBA86;border-radius:3px"></div></div></div></td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:left;font-size:12px">559</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);color:#222">Papelão</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06)"><span class="badge" style="background:#e8eeff;color:#8AA5FF;padding:3px 12px">Reciclagem</span></td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:left;font-size:12px">23,41</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);font-size:12px"><div style="display:flex;align-items:center;gap:8px"><span style="min-width:28px">19%</span><div style="flex:1;background:rgba(0,0,0,0.06);border-radius:3px;height:5px;overflow:hidden"><div style="width:19%;height:100%;background:#8AA5FF;border-radius:3px"></div></div></div></td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:left;font-size:12px">488</td>
+              </tr>
+              <tr>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);color:#222">Não Reciclável</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06)"><span class="badge" style="background:#fdf0e6;color:#b35a00;padding:3px 12px;white-space:nowrap">Co-processamento</span></td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:left;font-size:12px">4,43</td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);font-size:12px"><div style="display:flex;align-items:center;gap:8px"><span style="min-width:28px">4%</span><div style="flex:1;background:rgba(0,0,0,0.06);border-radius:3px;height:5px;overflow:hidden"><div style="width:4%;height:100%;background:#b35a00;border-radius:3px"></div></div></div></td>
+                <td style="padding:12px 16px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:left;font-size:12px">53</td>
+              </tr>
+              <tr style="font-weight:600;background:rgba(0,0,0,0.04)">
+                <td style="padding:12px 16px;color:#222">Total</td>
+                <td style="padding:12px 16px"></td>
+                <td style="padding:12px 16px;text-align:left;font-size:12px">123,29</td>
+                <td style="padding:12px 16px;text-align:left;font-size:12px">100%</td>
+                <td style="padding:12px 16px;text-align:left;font-size:12px">3.292</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+
+        <!-- Card 1: Por resíduo — treemap -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">Operação completa por tipo de resíduo</div>
+            <div class="chart-insight">Rejeito é o maior fluxo isolado (38%). Reciclável e Papelão juntos superam o rejeito — sinal de maturidade operacional.</div>
+          </div>
+          <div class="chart-inner">
+            <div id="treemapResiduos" style="position:relative;height:260px;width:100%"></div>
+          </div>
+          <div class="chart-legend">
+            <span><span class="leg-dot" style="background:#db9865"></span>Rejeito + Não Rec.</span>
+            <span><span class="leg-dot" style="background:#8AA5FF"></span>Reciclável</span>
+            <span><span class="leg-dot" style="background:#FFBA86"></span>Orgânico</span>
+            <span><span class="leg-dot" style="background:#bacaff"></span>Papelão</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Por destinação -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">Volume destinado por tipo de tratativa</div>
+            <div class="chart-insight">58% do volume tem destinação nobre. Reduzir co-processamento abaixo de 40% é a principal alavanca para 2026.</div>
+          </div>
+          <div class="chart-inner">
+            <div style="position:relative;height:260px">
+              <canvas id="cDest"></canvas>
+            </div>
+          </div>
+          <div class="chart-legend">
+            <span><span class="leg-dot" style="background:#b35a00"></span>Co-processamento</span>
+            <span><span class="leg-dot" style="background:#8AA5FF"></span>Reciclagem</span>
+            <span><span class="leg-dot" style="background:#FFBA86"></span>Compostagem</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       ABA 2 — UNIDADES & TIERS
+  ══════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-unidades">
+
+    <div style="margin-bottom:28px">
+      <h1 style="font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222;margin-bottom:4px">Índice de Geração</h1>
+      <p style="font-size:13px;color:#666">Média mensal de operação completa por unidade · 2025</p>
+    </div>
+
+    <div class="sec">
+      <div class="chart-insight">Variação de 3x no volume médio entre Tier A e Tier C. Reduzir geração nas unidades Tier A é a principal alavanca de eficiência operacional para 2026.</div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px">
+        <div class="tc" style="border-top:3px solid #b35a00">
+          <span class="badge" style="background:#fdf0e6;color:#b35a00;align-self:flex-start">CD</span>
+          <div style="margin-top:10px;font-size:11px;color:var(--text-muted)">categoria separada</div>
+          <div style="margin-top:4px;font-size:12px;color:var(--text-secondary);line-height:1.5">Centro de distribuição.</div>
+          <div style=" margin-top:auto;font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222">1 <span style="font-size:12px;color:#999;font-family:'Inter',sans-serif">unidade</span></div>
+        </div>
+        <div class="tc" style="border-top:3px solid #b35a00">
+          <span class="badge" style="background:#fdf0e6;color:#b35a00;align-self:flex-start">Hub</span>
+          <div style="margin-top:10px;font-size:11px;color:var(--text-muted)">categoria separada</div>
+          <div style="margin-top:4px;font-size:12px;color:var(--text-secondary);line-height:1.5">Hub de operações.</div>
+          <div style=" margin-top:auto;font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222">1 <span style="font-size:12px;color:#999;font-family:'Inter',sans-serif">unidade</span></div>
+        </div>
+        <div class="tc" style="border-top:3px solid #8AA5FF">
+          <span class="badge" style="background:#eef1ff;color:#4466cc;align-self:flex-start">Tier A</span>
+          <div style="margin-top:10px;font-size:11px;color:var(--text-muted)">≥ 1,5 ton/mês</div>
+          <div style="margin-top:4px;font-size:12px;color:var(--text-secondary);line-height:1.5">Alto índice de geração.</div>
+          <div style=" margin-top:auto;font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222">2 <span style="font-size:12px;color:#999;font-family:'Inter',sans-serif">unidades</span></div>
+        </div>
+        <div class="tc" style="border-top:3px solid #bacaff">
+          <span class="badge" style="background:#f0f4ff;color:#6688dd;align-self:flex-start">Tier B</span>
+          <div style="margin-top:10px;font-size:11px;color:var(--text-muted)">0,5 – 1,5 ton/mês</div>
+          <div style="margin-top:4px;font-size:12px;color:var(--text-secondary);line-height:1.5">Índice de geração médio.</div>
+          <div style=" margin-top:auto;font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222">6 <span style="font-size:12px;color:#999;font-family:'Inter',sans-serif">unidades</span></div>
+        </div>
+        <div class="tc" style="border-top:3px solid #FFBA86">
+          <span class="badge" style="background:#fff4ec;color:#b35a00;align-self:flex-start">Tier C</span>
+          <div style="margin-top:10px;font-size:11px;color:var(--text-muted)">&lt; 0,5 ton/mês</div>
+          <div style="margin-top:4px;font-size:12px;color:var(--text-secondary);line-height:1.5">Baixo índice de geração.</div>
+          <div style=" margin-top:auto;font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222">3 <span style="font-size:12px;color:#999;font-family:'Inter',sans-serif">unidades</span></div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">Perfil de geração por unidade e tier</div>
+          <div class="chart-insight">A média mensal por loja varia até 12x — de 0,29t (Sócrates) a 3,44t (Braz Leme). Entender os fatores por trás dessa variação é o caminho para reduzir geração nas unidades de maior volume.</div>
+        </div>
+        <div style="overflow:hidden;border-radius:10px;border:1px solid rgba(0,0,0,0.06)">
+          <table style="width:100%;border-collapse:collapse">
+          <thead>
+            <tr>
+              <th>Unidade</th>
+              <th>Tipo</th>
+              <th>Índice de geração</th>
+              <th class="num">Vol. total (ton)</th>
+              <th class="num">Média/mês (ton)</th>
+              <th class="num">Transportadores</th>
+              <th class="num">Receptores</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CD Itapeva</td><td><span class="badge" style="background:#fdf0e6;color:#b35a00">CD</span></td><td><span class="badge" style="background:#fdf0e6;color:#b35a00">CD</span></td><td class="num">41,25</td><td class="num">41,25</td><td class="num">2</td><td class="num">2</td></tr>
+            <tr><td>Petlog Belenzinho</td><td><span class="badge" style="background:#fdf0e6;color:#b35a00">Hub</span></td><td><span class="badge" style="background:#fdf0e6;color:#b35a00">Hub</span></td><td class="num">11,90</td><td class="num">0,99</td><td class="num">1</td><td class="num">1</td></tr>
+            <tr><td>Braz Leme</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#eef1ff;color:#4466cc">A</span></td><td class="num">6,87</td><td class="num">3,44</td><td class="num">1</td><td class="num">2</td></tr>
+            <tr><td>Hospital Veros</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#eef1ff;color:#4466cc">A</span></td><td class="num">5,71</td><td class="num">2,86</td><td class="num">1</td><td class="num">2</td></tr>
+            <tr><td>Campo Belo</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#f0f4ff;color:#6688dd">B</span></td><td class="num">8,20</td><td class="num">0,68</td><td class="num">2</td><td class="num">5</td></tr>
+            <tr><td>Cidade Jardim</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#f0f4ff;color:#6688dd">B</span></td><td class="num">7,89</td><td class="num">0,66</td><td class="num">2</td><td class="num">4</td></tr>
+            <tr><td>Tutóia (Vl. Mariana)</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#f0f4ff;color:#6688dd">B</span></td><td class="num">7,87</td><td class="num">0,66</td><td class="num">2</td><td class="num">5</td></tr>
+            <tr><td>Oscar Freire</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#f0f4ff;color:#6688dd">B</span></td><td class="num">7,32</td><td class="num">0,61</td><td class="num">2</td><td class="num">5</td></tr>
+            <tr><td>Santos</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#f0f4ff;color:#6688dd">B</span></td><td class="num">6,45</td><td class="num">0,54</td><td class="num">1</td><td class="num">2</td></tr>
+            <tr><td>Airi (Tatuapé)</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#f0f4ff;color:#6688dd">B</span></td><td class="num">6,22</td><td class="num">0,52</td><td class="num">2</td><td class="num">4</td></tr>
+            <tr><td>Portugal (S. André)</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#fff4ec;color:#b35a00">C</span></td><td class="num">5,24</td><td class="num">0,44</td><td class="num">1</td><td class="num">1</td></tr>
+            <tr><td>Juriti (Moema)</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#fff4ec;color:#b35a00">C</span></td><td class="num">4,85</td><td class="num">0,40</td><td class="num">1</td><td class="num">1</td></tr>
+            <tr><td>Sócrates</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#fff4ec;color:#b35a00">C</span></td><td class="num">3,52</td><td class="num">0,29</td><td class="num">1</td><td class="num">1</td></tr>
+            <tr class="total-row">
+              <td>Total / Média</td><td></td><td></td>
+              <td class="num">123,29</td>
+              <td class="num">—</td>
+              <td class="num">~4,1 média</td>
+              <td class="num">~6,5 média</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div class="sec-title">volume mensal por tier (ton)</div>
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">Volume médio mensal por tier</div>
+          <div class="chart-insight">Nov/25 registra crescimento simultâneo em todos os tiers — efeito Black November. Tier A e CD estreiam nesse pico, o que pode distorcer a leitura da média histórica dessas categorias.</div>
+        </div>
+        <div class="chart-inner">
+        <div style="position:relative;width:100%;height:300px">
+          <canvas id="cMensalTierNovo" role="img" aria-label="Volume mensal por tier Jan-Dez 2025">Volume mensal por tier.</canvas>
+        </div>
+        <div class="legend">
+          <span><span class="leg-dot" style="background:#b35a00"></span>CD</span>
+          <span><span class="leg-dot" style="background:#FFBA86"></span>Hub</span>
+          <span><span class="leg-dot" style="background:#8AA5FF"></span>Tier A</span>
+          <span><span class="leg-dot" style="background:#bacaff"></span>Tier B</span>
+          <span><span class="leg-dot" style="background:#db9865"></span>Tier C</span>
+        </div>
+        <div style="margin-top:12px;font-size:11px;color:var(--text-muted);font-family:var(--mono)">
+          * nov/25: entrada de Braz Leme e Hospital Veros (Tier A) · dez/25: entrada de CD Itapeva
+        </div>
+      </div><!-- /chart-inner -->
+      </div><!-- /chart-card -->
+    </div><!-- /sec -->
+
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       ABA 3 — TAXA DE RECICLAGEM
+  ══════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-residuos">
+
+    <div style="margin-bottom:28px">
+      <h1 style="font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222;margin-bottom:4px">Taxa de Reciclagem</h1>
+      <p style="font-size:13px;color:#666">(Reciclável + Papelão + Orgânico) ÷ volume total coletado · 2025</p>
+    </div>
+
+    <div class="sec">
+      <div class="chart-insight">Cidade Jardim e Oscar Freire lideram com mais de 68% de reciclagem. Santos e Portugal, ambas fora da capital, ficam abaixo de 25% — geografia pode ser um fator limitante de mix de coleta.</div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px">
+        <div class="tc" style="border-top:3px solid #b35a00">
+          <span class="badge" style="background:#fdf0e6;color:#b35a00;align-self:flex-start">CD</span>
+          <div style="margin-top:10px;font-size:11px;color:var(--text-muted)">categoria separada</div>
+          <div style="margin-top:4px;font-size:12px;color:var(--text-secondary);line-height:1.5">Centro de distribuição.</div>
+          <div style="margin-top:auto;font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222">1 <span style="font-size:12px;color:#999;font-family:'Inter',sans-serif">unidade</span></div>
+        </div>
+        <div class="tc" style="border-top:3px solid #b35a00">
+          <span class="badge" style="background:#fdf0e6;color:#b35a00;align-self:flex-start">Hub</span>
+          <div style="margin-top:10px;font-size:11px;color:var(--text-muted)">categoria separada</div>
+          <div style="margin-top:4px;font-size:12px;color:var(--text-secondary);line-height:1.5">Hub de operações.</div>
+          <div style="margin-top:auto;font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222">1 <span style="font-size:12px;color:#999;font-family:'Inter',sans-serif">unidade</span></div>
+        </div>
+        <div class="tc" style="border-top:3px solid #8AA5FF">
+          <span class="badge" style="background:#eef1ff;color:#4466cc;align-self:flex-start">Tier A</span>
+          <div style="margin-top:10px;font-size:11px;color:var(--text-muted)">≥ 60% reciclagem</div>
+          <div style="margin-top:4px;font-size:12px;color:var(--text-secondary);line-height:1.5">Alto desempenho.</div>
+          <div style="margin-top:auto;font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222">4 <span style="font-size:12px;color:#999;font-family:'Inter',sans-serif">unidades</span></div>
+        </div>
+        <div class="tc" style="border-top:3px solid #bacaff">
+          <span class="badge" style="background:#f0f4ff;color:#6688dd;align-self:flex-start">Tier B</span>
+          <div style="margin-top:10px;font-size:11px;color:var(--text-muted)">40% – 60% reciclagem</div>
+          <div style="margin-top:4px;font-size:12px;color:var(--text-secondary);line-height:1.5">Desempenho médio.</div>
+          <div style="margin-top:auto;font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222">4 <span style="font-size:12px;color:#999;font-family:'Inter',sans-serif">unidades</span></div>
+        </div>
+        <div class="tc" style="border-top:3px solid #FFBA86">
+          <span class="badge" style="background:#fff4ec;color:#b35a00;align-self:flex-start">Tier C</span>
+          <div style="margin-top:10px;font-size:11px;color:var(--text-muted)">&lt; 40% reciclagem</div>
+          <div style="margin-top:4px;font-size:12px;color:var(--text-secondary);line-height:1.5">Potencial de melhoria.</div>
+          <div style="margin-top:auto;font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222">3 <span style="font-size:12px;color:#999;font-family:'Inter',sans-serif">unidades</span></div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">Ranking por taxa de reciclagem</div>
+          <div class="chart-insight">CD Itapeva tem a maior taxa da rede com 72,5% — perfil de resíduo de centro de distribuição favorece recicláveis e papelão. Lojas com mix predominante de Rejeito tendem ao Tier C.</div>
+        </div>
+        <div style="overflow:hidden;border-radius:10px;border:1px solid rgba(0,0,0,0.06)">
+        <table style="width:100%;border-collapse:collapse">
+          <thead>
+            <tr>
+              <th>Unidade</th>
+              <th>Tipo</th>
+              <th>Taxa de reciclagem</th>
+              <th class="num">Vol. reciclado (ton)</th>
+              <th class="num">Vol. co-proc. (ton)</th>
+              <th class="num">Vol. total (ton)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>CD Itapeva</td><td><span class="badge" style="background:#fdf0e6;color:#b35a00">CD</span></td><td><span class="badge" style="background:#fdf0e6;color:#b35a00">CD</span> 72,5%<div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:73%;background:#b35a00"></span></span></div></td><td class="num">29,91</td><td class="num">11,34</td><td class="num">41,25</td></tr>
+            <tr><td>Cidade Jardim</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#eef1ff;color:#4466cc">A</span> 71,0% <div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:71%;background:#8AA5FF"></span></span></div></td><td class="num">5,61</td><td class="num">2,29</td><td class="num">7,90</td></tr>
+            <tr><td>Oscar Freire</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#eef1ff;color:#4466cc">A</span> 68,4% <div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:68%;background:#8AA5FF"></span></span></div></td><td class="num">5,01</td><td class="num">2,31</td><td class="num">7,32</td></tr>
+            <tr><td>Hospital Veros</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#eef1ff;color:#4466cc">A</span> 67,6% <div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:68%;background:#8AA5FF"></span></span></div></td><td class="num">3,86</td><td class="num">1,85</td><td class="num">5,71</td></tr>
+            <tr><td>Tutóia (Vl. Mariana)</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#eef1ff;color:#4466cc">A</span> 62,5% <div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:63%;background:#8AA5FF"></span></span></div></td><td class="num">4,93</td><td class="num">2,96</td><td class="num">7,89</td></tr>
+            <tr><td>Braz Leme</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#f0f4ff;color:#6688dd">B</span> 54,6% <div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:55%;background:#bacaff"></span></span></div></td><td class="num">3,75</td><td class="num">3,12</td><td class="num">6,87</td></tr>
+            <tr><td>Campo Belo</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#f0f4ff;color:#6688dd">B</span> 52,9% <div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:53%;background:#bacaff"></span></span></div></td><td class="num">4,34</td><td class="num">3,86</td><td class="num">8,20</td></tr>
+            <tr><td>Airi (Tatuapé)</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#f0f4ff;color:#6688dd">B</span> 52,7% <div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:53%;background:#bacaff"></span></span></div></td><td class="num">3,28</td><td class="num">2,94</td><td class="num">6,22</td></tr>
+            <tr><td>Juriti (Moema)</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#f0f4ff;color:#6688dd">B</span> 40,5% <div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:41%;background:#bacaff"></span></span></div></td><td class="num">1,97</td><td class="num">2,89</td><td class="num">4,86</td></tr>
+            <tr><td>Petlog Belenzinho</td><td><span class="badge" style="background:#fdf0e6;color:#b35a00">Hub</span></td><td><span class="badge" style="background:#fdf0e6;color:#b35a00">Hub</span> 46,3%<div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:46%;background:#FFBA86"></span></span></div></td><td class="num">5,52</td><td class="num">6,39</td><td class="num">11,91</td></tr>
+            <tr><td>Sócrates</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#fff4ec;color:#b35a00">C</span> 26,6% <div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:27%;background:#db9865"></span></span></div></td><td class="num">0,93</td><td class="num">2,57</td><td class="num">3,50</td></tr>
+            <tr><td>Portugal (S. André)</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#fff4ec;color:#b35a00">C</span> 24,0% <div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:24%;background:#db9865"></span></span></div></td><td class="num">1,26</td><td class="num">3,99</td><td class="num">5,25</td></tr>
+            <tr><td>Santos</td><td><span class="badge" style="background:#f5f5f5;color:#666">Loja</span></td><td><span class="badge" style="background:#fff4ec;color:#b35a00">C</span> 22,8% <div style="margin-top:4px"><span class="bar-wrap"><span class="bar-fill" style="width:23%;background:#db9865"></span></span></div></td><td class="num">1,47</td><td class="num">4,99</td><td class="num">6,46</td></tr>
+            <tr class="total-row"><td>Média lojas</td><td></td><td>49,3%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div class="sec-title">taxa de reciclagem por tier — comparativo</div>
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">Taxa de reciclagem por tier</div>
+          <div class="chart-insight">Tier A e Tier C não se misturam — há uma separação clara de desempenho entre os grupos. Elevar as 3 lojas do Tier C para Tier B é a maior alavanca de reciclagem da rede.</div>
+        </div>
+        <div class="chart-inner">
+          <div style="position:relative;width:100%;height:520px">
+            <canvas id="cTaxaTier" role="img" aria-label="Taxa de reciclagem por unidade">Taxa reciclagem por unidade.</canvas>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <span><span class="leg-dot" style="background:#b35a00"></span>CD</span>
+          <span><span class="leg-dot" style="background:#FFBA86"></span>Hub</span>
+          <span><span class="leg-dot" style="background:#8AA5FF"></span>Tier A</span>
+          <span><span class="leg-dot" style="background:#bacaff"></span>Tier B</span>
+          <span><span class="leg-dot" style="background:#db9865"></span>Tier C</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       ABA 4 — IMPACTO AMBIENTAL
+  ══════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-indice">
+
+    <div style="margin-bottom:28px">
+      <h1 style="font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222;margin-bottom:4px">Impacto Ambiental</h1>
+      <p style="font-size:13px;color:#666">Estimativas baseadas em metodologias Planton, Eu Reciclo, WRAP, ABRELPE e EMBRAPA</p>
+    </div>
+
+    <div class="sec">
+      <div class="sec-title">resumo do impacto — 2025</div>
+      <div class="grid-4">
+        <div class="mc" style="border-top:3px solid #b35a00">
+          <div class="mc-label">CO₂ evitado total</div>
+          <div class="mc-value">92,10</div>
+          <div class="mc-sub">tCO₂e em 2025</div>
+        </div>
+        <div class="mc" style="border-top:3px solid #FFBA86">
+          <div class="mc-label">Espaço evitado em aterro</div>
+          <div class="mc-value">154,1</div>
+          <div class="mc-sub">m³ desviados</div>
+        </div>
+        <div class="mc" style="border-top:3px solid #8AA5FF">
+          <div class="mc-label">Adubo produzido</div>
+          <div class="mc-value">7,2</div>
+          <div class="mc-sub">ton de composto gerado</div>
+        </div>
+        <div class="mc" style="border-top:3px solid #bacaff">
+          <div class="mc-label">Energia via co-proc.</div>
+          <div class="mc-value">149</div>
+          <div class="mc-sub">MWh equivalentes</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">CO₂ evitado por tipo de resíduo</div>
+          <div class="chart-insight">Pico em nov/25 reflete o efeito Black November — entrada do CD Itapeva e Tier A concentra grande volume de recicláveis e papelão nesse mês.</div>
+        </div>
+        <div class="chart-inner">
+          <div style="position:relative;width:100%;height:280px">
+            <canvas id="cCo2Bar" role="img" aria-label="CO2 evitado por resíduo">CO2 por resíduo.</canvas>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <span><span class="leg-dot" style="background:#8AA5FF"></span>Reciclável</span>
+          <span><span class="leg-dot" style="background:#bacaff"></span>Papelão</span>
+          <span><span class="leg-dot" style="background:#FFBA86"></span>Orgânico</span>
+        </div>
+        <div style="overflow:hidden;border-radius:10px;border:1px solid rgba(0,0,0,0.06);margin-top:16px">
+          <table style="width:100%;border-collapse:collapse">
+            <thead>
+              <tr>
+                <th>Resíduo</th>
+                <th class="num">Vol. (ton)</th>
+                <th class="num">Fator</th>
+                <th class="num">tCO₂e</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="leg-dot" style="background:#8AA5FF"></span> Reciclável</td>
+                <td class="num">24,52</td>
+                <td class="num">2,059</td>
+                <td class="num" style="font-weight:500">50,49</td>
+              </tr>
+              <tr>
+                <td><span class="leg-dot" style="background:#bacaff"></span> Papelão</td>
+                <td class="num">23,41</td>
+                <td class="num">1,348</td>
+                <td class="num" style="font-weight:500">31,56</td>
+              </tr>
+              <tr>
+                <td><span class="leg-dot" style="background:#FFBA86"></span> Orgânico</td>
+                <td class="num">23,93</td>
+                <td class="num">0,420</td>
+                <td class="num" style="font-weight:500">10,05</td>
+              </tr>
+              <tr class="total-row">
+                <td>Total</td>
+                <td class="num">71,86</td>
+                <td class="num">—</td>
+                <td class="num">92,10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div class="sec-title">outros indicadores de impacto</div>
+      <div class="grid-3">
+        <div class="chart-card" style="border-top:3px solid #b35a00">
+          <div style="width:36px;height:36px;background:#fdf0e6;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:10px">
+            <svg viewBox="0 0 512 512" width="22" height="22" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0,512) scale(0.1,-0.1)" fill="#b35a00" stroke="none"><path d="M2460 5107 c-19 -7 -435 -224 -925 -481 -678 -356 -899 -477 -927 -506 -89 -92 -82 -241 14 -326 19 -17 440 -245 935 -507 665 -352 914 -479 947 -483 30 -4 61 -1 93 9 26 9 453 227 948 486 664 346 909 479 938 507 88 88 84 238 -10 326 -28 26 -1806 953 -1872 976 -43 15 -96 15 -141 -1z"/><path d="M447 3446 c-60 -17 -115 -60 -144 -116 l-23 -43 0 -1091 c0 -1034 1 -1093 19 -1131 10 -22 33 -54 52 -70 42 -37 1686 -973 1731 -986 103 -29 217 23 271 125 l22 41 0 1105 0 1105 -22 46 c-13 25 -35 57 -50 71 -23 21 -1477 819 -1673 918 -70 35 -122 43 -183 26z"/><path d="M4565 3451 c-40 -10 -11 5 -920 -488 -440 -239 -815 -449 -832 -466 -72 -68 -68 3 -68 -1222 l0 -1100 22 -41 c48 -90 146 -143 240 -130 53 7 27 -7 568 301 231 131 584 332 785 446 201 114 382 222 404 240 21 18 47 51 57 73 18 39 19 90 19 1129 0 1176 3 1117 -54 1184 -47 56 -152 91 -221 74z"/></g></svg>
+          </div>
+          <div class="sec-title" style="margin-bottom:10px">espaço evitado em aterro</div>
+          <div style="font-family:var(--mono);font-size:32px;font-weight:300;color:var(--text-primary);margin-bottom:6px">154,1 <span style="font-size:14px;color:var(--text-muted)">m³</span></div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">123,29 ton desviadas de aterro<br>÷ densidade 0,8 ton/m³</div>
+          <div style="margin-top:10px;font-size:10px;color:var(--text-muted);font-family:var(--mono)">ref: ABRELPE — Panorama RSB 2023</div>
+        </div>
+        <div class="chart-card" style="border-top:3px solid #FFBA86">
+          <div style="width:36px;height:36px;background:#fff4ec;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:10px">
+            <svg viewBox="0 0 512 512" width="22" height="22" xmlns="http://www.w3.org/2000/svg"><path fill="#FFBA86" d="M160.61,511h20.7c7.24,0,13.1-5.87,13.1-13.1l8.04-104.33c0-5.83,4.59-10.62,10.42-10.84,54.27-2.1,105.97-12.42,145.24-53.02,85.62-88.51,51.06-228.7-8.96-321.34-.4-.62-1.53-2.06-2.94-3.85-4.13-5.24-12.36-4.52-15.37,1.44-26.03,51.45-84.28,73.4-132.86,97.77-63.61,31.92-102.37,98.03-94.39,169.97,1.55,13.99,4.52,27.9,9.08,41.22,3.52,10.29,7.2,20.93,14.62,29.17,3.02,3.34,6.87,6.1,11.28,7.03,5.88,1.23,11.98-1.05,13.65-7.09,9.05-32.75,21.98-65.14,38.91-94.93,11.22-19.75,24.32-38.36,38.31-56.22,4.8-6.13,33.68-48.45,41.79-38.83,2.34,2.78.13,6.93-2.05,9.84-29.41,39.2-54.44,81.88-74.88,126.41-19.72,42.97-44.21,142.01-46.66,189.62-.32,6.21-.38,12.44-.13,18.65.28,6.98,6.11,12.45,13.09,12.45z"/></svg>
+          </div>
+          <div class="sec-title" style="margin-bottom:10px">adubo produzido</div>
+          <div style="font-family:var(--mono);font-size:32px;font-weight:300;color:var(--text-primary);margin-bottom:6px">7,2 <span style="font-size:14px;color:var(--text-muted)">ton</span></div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">23,93 ton Orgânico<br>× taxa de conversão 30%</div>
+          <div style="margin-top:10px;font-size:10px;color:var(--text-muted);font-family:var(--mono)">ref: EMBRAPA — Manual de Compostagem 2020</div>
+        </div>
+        <div class="chart-card" style="border-top:3px solid #bacaff">
+          <div style="width:36px;height:36px;background:#f0f4ff;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:10px">
+            <svg viewBox="0 0 512 512" width="22" height="22" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0,512) scale(0.1,-0.1)" fill="#bacaff" stroke="none"><path d="M2487 4590 c-27 -5 -72 -20 -100 -34 -31 -16 -520 -416 -1212 -994 -1222 -1019 -1188 -988 -1172 -1054 4 -13 58 -85 122 -160 96 -114 121 -138 149 -144 19 -3 44 -3 55 1 11 3 517 420 1123 925 607 506 1105 920 1108 920 3 0 501 -414 1108 -920 606 -505 1112 -922 1123 -925 11 -4 36 -4 55 -1 28 6 53 30 149 144 64 75 118 147 122 160 15 62 3 74 -367 382 l-355 296 -5 672 -5 672 -28 27 -27 28 -323 3 c-210 2 -335 0 -358 -7 -68 -20 -68 -22 -71 -386 l-3 -327 -408 340 c-437 365 -450 374 -572 385 -33 3 -82 2 -108 -3z"/><path d="M1642 3018 l-912 -752 0 -780 c0 -537 4 -794 11 -821 15 -55 83 -119 142 -133 32 -9 228 -12 656 -12 l611 0 0 610 0 610 410 0 410 0 0 -610 0 -610 611 0 c407 0 625 4 653 11 56 14 114 62 137 113 18 39 19 84 19 832 l0 790 -909 749 c-499 412 -912 750 -917 752 -5 2 -420 -335 -922 -749z"/></g></svg>
+          </div>
+          <div class="sec-title" style="margin-bottom:10px">energia via co-processamento</div>
+          <div style="font-family:var(--mono);font-size:32px;font-weight:300;color:var(--text-primary);margin-bottom:6px">149 <span style="font-size:14px;color:var(--text-muted)">MWh</span></div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6">51,43 ton Rejeito + Não Rec.<br>× 2.500 kcal/kg (poder calorífico)</div>
+          <div style="margin-top:10px;font-size:10px;color:var(--text-muted);font-family:var(--mono)">ref: ABCP — Co-processamento em Cimenteiras</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div class="sec-title">escala do impacto</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+
+        <div class="chart-card" style="display:flex;flex-direction:column;gap:8px;padding:28px 24px;border-top:3px solid #b35a00">
+          <div style="width:36px;height:36px;background:#fdf0e6;border-radius:8px;display:flex;align-items:center;justify-content:center">
+            <svg viewBox="0 0 512 512" width="22" height="22" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0,512) scale(0.1,-0.1)" fill="#b35a00" stroke="none"><path d="M1060 4785 l0 -335 1503 2 1502 3 3 333 2 332 -1505 0 -1505 0 0 -335z"/><path d="M1036 4138 c-2 -7 -43 -312 -90 -678 l-86 -665 0 -1397 0 -1398 1700 0 1700 0 0 1400 0 1400 -85 653 c-47 358 -87 662 -90 675 l-5 22 -1521 0 c-1207 0 -1520 -3 -1523 -12z m2024 -588 l0 -150 -470 0 -470 0 0 150 0 150 470 0 470 0 0 -150z m95 -572 c127 -42 228 -134 286 -261 31 -71 37 -77 79 -93 189 -71 311 -247 311 -449 1 -139 -44 -250 -140 -346 -101 -100 -218 -144 -365 -137 -50 3 -98 8 -106 12 -11 4 -100 -79 -303 -282 l-288 -288 12 -54 c15 -72 6 -191 -20 -261 -80 -213 -304 -345 -523 -310 -155 24 -294 125 -363 264 -19 38 -35 76 -35 83 0 8 -5 14 -11 14 -35 0 -160 74 -211 125 -188 186 -193 479 -13 673 119 129 306 182 480 137 l59 -16 274 274 274 274 -16 53 c-23 77 -21 206 4 281 87 258 356 393 615 307z"/><path d="M2964 2700 c-51 -11 -98 -46 -123 -90 -19 -34 -23 -52 -19 -101 4 -60 9 -68 92 -174 l29 -36 -449 -450 c-247 -247 -453 -449 -457 -449 -5 0 -32 20 -60 44 -29 24 -66 51 -84 60 -44 22 -108 20 -160 -5 -107 -52 -133 -192 -52 -284 42 -47 85 -59 207 -56 l103 2 -3 -113 c-2 -126 7 -155 62 -201 27 -23 86 -47 115 -47 60 0 148 60 171 117 28 66 16 119 -54 233 l-21 36 447 447 447 447 62 -41 c95 -63 182 -65 249 -7 48 42 64 77 64 139 0 67 -33 126 -88 157 -35 19 -54 22 -153 22 l-114 0 3 111 c3 102 1 113 -21 152 -39 65 -122 103 -193 87z"/></g></svg>
+          </div>
+          <div style="font-size:11px;font-family:var(--mono);color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em">resíduo desviado de aterro</div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px">Equivale ao peso de</div>
+          <div style="font-size:52px;font-weight:300;font-family:var(--mono);color:var(--text-primary);line-height:1">4.930</div>
+          <div style="font-size:14px;color:var(--text-secondary)">sacos de ração (25kg)</div>
+          <div style="font-size:10px;color:var(--text-muted);font-family:var(--mono);margin-top:auto;padding-top:12px">123,29 ton ÷ 0,025 ton/saco · ref. ABRELPE 2023</div>
+        </div>
+
+        <div class="chart-card" style="display:flex;flex-direction:column;gap:8px;padding:28px 24px;border-top:3px solid #FFBA86">
+          <div style="width:36px;height:36px;background:#fff4ec;border-radius:8px;display:flex;align-items:center;justify-content:center">
+            <svg viewBox="0 0 512 512" width="22" height="22" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0,512) scale(0.1,-0.1)" fill="#FFBA86" stroke="none"><path d="M2290 4346 c-295 -53 -539 -178 -746 -383 -191 -188 -326 -435 -379 -688 -14 -70 -34 -239 -35 -302 0 -22 -4 -23 -76 -23 -152 0 -373 -64 -509 -147 -289 -176 -478 -453 -530 -777 -47 -289 27 -585 206 -827 59 -80 184 -201 259 -250 132 -87 304 -155 450 -179 43 -6 576 -10 1545 -10 1641 0 1570 -3 1775 66 412 138 736 490 833 909 75 323 29 646 -134 930 -67 117 -102 162 -207 268 -209 213 -473 336 -782 368 l-115 11 -33 102 c-67 210 -189 403 -354 562 -192 184 -402 297 -663 355 -116 27 -394 35 -505 15z m-40 -1675 c72 -23 150 -71 205 -128 43 -44 70 -92 58 -103 -13 -11 -183 -130 -186 -130 -2 0 -17 19 -34 43 -47 64 -119 99 -215 105 -72 4 -83 2 -141 -26 -69 -34 -125 -97 -154 -173 -26 -68 -23 -218 5 -290 29 -72 86 -137 148 -169 41 -21 63 -25 129 -25 115 1 198 44 240 125 l15 29 102 -61 c57 -33 106 -63 110 -67 4 -4 -8 -30 -27 -59 -86 -127 -258 -206 -450 -206 -121 0 -196 23 -297 91 -86 57 -149 128 -198 225 -71 143 -87 294 -44 439 56 190 226 351 417 395 83 19 232 12 317 -15z m1094 0 c173 -61 304 -197 363 -375 36 -109 37 -258 4 -356 -33 -96 -77 -168 -145 -236 -314 -315 -825 -175 -952 261 -42 145 -10 340 76 472 79 119 218 218 353 249 83 19 224 12 301 -15z m693 -918 c41 -19 73 -66 73 -106 0 -55 -27 -91 -113 -148 l-82 -54 103 -3 102 -3 0 -54 0 -55 -190 0 -190 0 1 28 c2 75 42 127 142 185 85 50 102 69 88 95 -21 39 -68 39 -124 -1 l-29 -19 -34 33 c-41 39 -42 53 -9 75 69 45 197 58 262 27z"/><path d="M3063 2444 c-203 -72 -264 -399 -109 -580 68 -79 189 -112 298 -80 227 66 290 439 102 605 -77 68 -193 89 -291 55z"/></g></svg>
+          </div>
+          <div style="font-size:11px;font-family:var(--mono);color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em">CO₂ evitado</div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px">Equivale à absorção de</div>
+          <div style="font-size:52px;font-weight:300;font-family:var(--mono);color:var(--text-primary);line-height:1">921</div>
+          <div style="font-size:14px;color:var(--text-secondary)">árvores / ano</div>
+          <div style="font-size:10px;color:var(--text-muted);font-family:var(--mono);margin-top:auto;padding-top:12px">92,10 tCO₂e · 0,10 t/árvore · ref. MMA</div>
+        </div>
+
+        <div class="chart-card" style="display:flex;flex-direction:column;gap:8px;padding:28px 24px;border-top:3px solid #bacaff">
+          <div style="width:36px;height:36px;background:#f0f4ff;border-radius:8px;display:flex;align-items:center;justify-content:center">
+            <svg viewBox="0 0 512 512" width="22" height="22" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0,512) scale(0.1,-0.1)" fill="#bacaff" stroke="none"><path d="M2487 4590 c-27 -5 -72 -20 -100 -34 -31 -16 -520 -416 -1212 -994 -1222 -1019 -1188 -988 -1172 -1054 4 -13 58 -85 122 -160 96 -114 121 -138 149 -144 19 -3 44 -3 55 1 11 3 517 420 1123 925 607 506 1105 920 1108 920 3 0 501 -414 1108 -920 606 -505 1112 -922 1123 -925 11 -4 36 -4 55 -1 28 6 53 30 149 144 64 75 118 147 122 160 15 62 3 74 -367 382 l-355 296 -5 672 -5 672 -28 27 -27 28 -323 3 c-210 2 -335 0 -358 -7 -68 -20 -68 -22 -71 -386 l-3 -327 -408 340 c-437 365 -450 374 -572 385 -33 3 -82 2 -108 -3z"/><path d="M1642 3018 l-912 -752 0 -780 c0 -537 4 -794 11 -821 15 -55 83 -119 142 -133 32 -9 228 -12 656 -12 l611 0 0 610 0 610 410 0 410 0 0 -610 0 -610 611 0 c407 0 625 4 653 11 56 14 114 62 137 113 18 39 19 84 19 832 l0 790 -909 749 c-499 412 -912 750 -917 752 -5 2 -420 -335 -922 -749z"/></g></svg>
+          </div>
+          <div style="font-size:11px;font-family:var(--mono);color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em">energia gerada</div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px">Equivale ao consumo de</div>
+          <div style="font-size:52px;font-weight:300;font-family:var(--mono);color:var(--text-primary);line-height:1">898</div>
+          <div style="font-size:14px;color:var(--text-secondary)">casas / mês</div>
+          <div style="font-size:10px;color:var(--text-muted);font-family:var(--mono);margin-top:auto;padding-top:12px">149 MWh · consumo médio 166 kWh/res./mês · ref. ANEEL 2023</div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="sec">
+      <div style="background:var(--surface-2);border-radius:var(--border-radius-md);padding:14px 16px;font-size:11px;color:var(--text-muted);font-family:var(--mono);line-height:1.8">
+        <strong style="color:var(--text-secondary);font-family:var(--sans);font-size:12px">Nota metodológica</strong><br>
+        CO₂ evitado: Reciclável (2,059 tCO₂e/ton) e Papelão (1,348 tCO₂e/ton) conforme metodologia Planton e Eu Reciclo. Orgânico (0,42 tCO₂e/ton) conforme WRAP Composting &amp; Food Waste, 2021. Rejeito e Não Reciclável não contabilizados como reciclagem.<br>
+        Espaço em aterro: densidade de compactação 0,8 ton/m³ (ABRELPE, 2023). Adubo: taxa de conversão de 30% do peso úmido (EMBRAPA, 2020). Energia: poder calorífico médio de 2.500 kcal/kg para RSU em co-processamento (ABCP).
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       ABA 5 — INSIGHTS
+  ══════════════════════════════════════════ -->
+  <div class="tab-panel" id="tab-insights">
+
+    <div style="margin-bottom:28px">
+      <h1 style="font-family:'Libre Caslon Text',serif;font-size:24px;font-weight:400;color:#222;margin-bottom:4px">Insights</h1>
+      <p style="font-size:13px;color:var(--text-secondary)">Principais padrões identificados · Jan – Dez 2025</p>
+    </div>
+
+    <!-- Featured card -->
+    <div style="background:#222222;border-radius:var(--radius);padding:40px 48px;margin-bottom:40px">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:#FFBA86;margin-bottom:20px;text-transform:uppercase">● Resultado do período</div>
+      <div style="font-family:'Libre Caslon Text',serif;font-size:32px;line-height:1.25;color:#fff;margin-bottom:16px">Em 2025, a Petlove desviou 123 toneladas de aterro.</div>
+      <div style="font-size:14px;line-height:1.7;color:rgba(255,255,255,0.6);max-width:680px">Reduzir o co-processamento abaixo de 40% e elevar a taxa de reciclagem das lojas Tier C são as duas alavancas que definem o impacto ambiental de 2026.</div>
+    </div>
+
+    <!-- O que os dados revelam -->
+    <div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:#b35a00;margin-bottom:16px;text-transform:uppercase">● O que os dados revelam</div>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px">
+
+      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+        <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">01</div>
+        <div style="flex:1">
+          <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Nov/25 distorce a leitura da rede inteira</div>
+          <div style="font-size:12px;line-height:1.65;color:var(--text-secondary)">CD Itapeva concentra 33% do volume anual em um único mês — sua estreia em dezembro, após o pico de Black November. Tier A também entra nesse período, inflando as médias. Qualquer análise de tendência precisa isolar esses meses para não tirar conclusões erradas sobre o padrão real da rede.</div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+        <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">02</div>
+        <div style="flex:1">
+          <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Variação de 12x na média mensal entre lojas</div>
+          <div style="font-size:12px;line-height:1.65;color:var(--text-secondary)">A média mensal por loja vai de 0,29t (Sócrates) a 3,44t (Braz Leme). Lojas da mesma rede, com a mesma estrutura operacional, gerando volumes radicalmente diferentes. Entender os fatores por trás dessa variação — mix de produtos, perfil de clientes, área — é o caminho para reduzir geração nas unidades de maior volume.</div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+        <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">03</div>
+        <div style="flex:1">
+          <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Taxa de reciclagem varia de 22% a 72% entre unidades</div>
+          <div style="font-size:12px;line-height:1.65;color:var(--text-secondary)">CD Itapeva e Cidade Jardim reciclam mais de 70% do volume. Santos, Portugal e Sócrates ficam abaixo de 27%. A geografia e o mix de resíduo explicam parte dessa diferença — mas a segregação na fonte é o fator mais controlável e com maior potencial de melhoria.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Ações prioritárias -->
+    <div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:#b35a00;margin-bottom:16px;text-transform:uppercase">● Ações prioritárias</div>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px">
+
+      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+        <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">01</div>
+        <div style="flex:1">
+          <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Elevar Santos, Portugal e Sócrates do Tier C</div>
+          <div style="font-size:12px;line-height:1.65;color:var(--text-secondary)">As 3 lojas com menor taxa de reciclagem da rede, todas abaixo de 27%. Recomendamos diagnóstico individual de fluxo de resíduos para identificar se o problema é de segregação, frequência de coleta ou mix de resíduo. Subir essas 3 unidades para o Tier B já representaria um ganho mensurável na taxa média da rede.</div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+        <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">02</div>
+        <div style="flex:1">
+          <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Reduzir geração nas unidades Tier A</div>
+          <div style="font-size:12px;line-height:1.65;color:var(--text-secondary)">Braz Leme e Hospital Veros geram em média 3x mais resíduo que as lojas Tier C. Para a Petlove, menos resíduo gerado significa mais eficiência operacional. Mapear o que explica esse volume — embalagens, desperdício de produto, processo de recebimento — é o primeiro passo para redução consistente.</div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+        <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">03</div>
+        <div style="flex:1">
+          <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Melhorar a segregação na fonte para reduzir co-processamento</div>
+          <div style="font-size:12px;line-height:1.65;color:var(--text-secondary)">Lojas Tier C têm 42% do volume indo para rejeito e co-processamento. Com triagem adequada, parte desse fluxo poderia migrar para reciclagem ou compostagem — reduzindo co-processamento abaixo de 40% e elevando a destinação nobre da rede de 58% para mais de 65%.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Para avançar juntos -->
+    <div style="font-size:11px;font-weight:600;letter-spacing:.1em;color:#b35a00;margin-bottom:4px;text-transform:uppercase">● Para avançar juntos</div>
+    <div style="font-size:13px;color:var(--text-secondary);margin-bottom:16px">Dados que a Petlove pode compartilhar para enriquecer as próximas análises.</div>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px">
+
+      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+        <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">01</div>
+        <div style="flex:1">
+          <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Mercadoria recebida por CD</div>
+          <div style="font-size:12px;line-height:1.65;color:var(--text-secondary)">Com o volume de mercadoria recebida e o volume de resíduo gerado, conseguimos calcular a taxa de geração real por unidade de produto. É o dado mais direto para identificar se o volume de resíduo está proporcional à operação — ou se há ineficiência na cadeia.</div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+        <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">02</div>
+        <div style="flex:1">
+          <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Histórico de pedidos / vendas</div>
+          <div style="font-size:12px;line-height:1.65;color:var(--text-secondary)">Permite cruzar volume de vendas com geração de resíduo por loja. Uma unidade com alto faturamento e baixa geração de resíduo é referência operacional. Uma com faturamento médio e alto volume de rejeito é candidata prioritária para diagnóstico.</div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border-radius:var(--radius);padding:20px 24px;border:1px solid rgba(0,0,0,0.05);display:flex;gap:20px;align-items:flex-start">
+        <div style="font-size:12px;font-weight:600;color:#b35a00;flex-shrink:0;padding-top:3px;width:20px">03</div>
+        <div style="flex:1">
+          <div style="font-family:'Libre Caslon Text',serif;font-size:15px;line-height:1.35;color:#222;margin-bottom:6px">Calendário de campanhas e promoções</div>
+          <div style="font-size:12px;line-height:1.65;color:var(--text-secondary)">Campanhas promocionais geram picos de entrada de mercadoria e embalagens. Com o calendário conseguimos antecipar variações no volume de resíduo, ajustar a frequência de coleta e evitar acúmulo ou descarte inadequado nas lojas.</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div><!-- /content -->
+
+<script>
+// Chart.js global defaults — seguindo identidade visual
+Chart.defaults.font.family = 'Inter';
+Chart.defaults.font.size = 11;
+Chart.defaults.color = '#888';
+const gridColor = 'rgba(0,0,0,0.08)';
+
+function showTab(id) {
+  try {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    var panel = document.getElementById('tab-' + id);
+    if (panel) panel.classList.add('active');
+    var btn = event.target.closest ? event.target.closest('.tab') : event.target;
+    if (btn) btn.classList.add('active');
+  } catch(e) { console.error(e); }
+}
+
+const RES_COLORS = ['#C0392B','#1B4F8A','#2D6A4F','#D97706','#888780'];
+const RES_LABELS = ['Rejeito','Reciclável','Orgânico','Papelão','Não Rec.'];
+const MESES = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+
+function donut(id, data) {
+  new Chart(document.getElementById(id), {
+    type: 'doughnut',
+    data: { labels: RES_LABELS, datasets: [{ data, backgroundColor: RES_COLORS, borderWidth: 0 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed}` } } }
+    }
+  });
+}
+
+// Por destinação — donut
+new Chart(document.getElementById('cDest'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Co-processamento', 'Reciclagem', 'Compostagem'],
+    datasets: [{
+      data: [51.43, 47.93, 23.93],
+      backgroundColor: ['#b35a00', '#8AA5FF', '#FFBA86'],
+      borderWidth: 3,
+      borderColor: '#fdf8f3',
+      hoverOffset: 6
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    cutout: '62%',
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => {
+        const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
+        const pct = ((ctx.parsed / total) * 100).toFixed(0);
+        return ` ${ctx.label}: ${ctx.parsed.toFixed(2).replace('.',',')}t · ${pct}%`;
+      }}}
+    }
+  }
+});
+
+// Taxa de reciclagem por unidade — barras horizontais com track
+(function() {
+  const labels = ['CD Itapeva','Cidade Jardim','Oscar Freire','Veros','Tutóia','Braz Leme','Campo Belo','Airi','Belenzinho CD','Juriti','Sócrates','Portugal','Santos'];
+  const values = [72.5,71.0,68.4,67.6,62.5,54.6,52.9,52.7,46.3,40.5,26.6,24.0,22.8];
+  const colors = ['#b35a00','#8AA5FF','#8AA5FF','#8AA5FF','#8AA5FF','#bacaff','#bacaff','#bacaff','#FFBA86','#bacaff','#db9865','#db9865','#db9865'];
+
+  const trackPlugin = {
+    id: 'trackBg',
+    afterDatasetsDraw(chart) {
+      const { ctx, scales: { x, y } } = chart;
+      const meta = chart.getDatasetMeta(0);
+      meta.data.forEach((bar, i) => {
+        const top = bar.y - bar.height / 2;
+        const h = bar.height;
+        const left = x.getPixelForValue(0);
+        const right = x.getPixelForValue(100);
+        const r = h / 2;
+        ctx.save();
+        ctx.fillStyle = 'rgba(0,0,0,0.08)';
+        ctx.beginPath();
+        ctx.moveTo(left + r, top);
+        ctx.lineTo(right - r, top);
+        ctx.arcTo(right, top, right, top + h, r);
+        ctx.arcTo(right, top + h, left, top + h, r);
+        ctx.lineTo(left + r, top + h);
+        ctx.arcTo(left, top + h, left, top, r);
+        ctx.arcTo(left, top, right, top, r);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      });
+    }
+  };
+
+  new Chart(document.getElementById('cTaxaTier'), {
+    type: 'bar',
+    plugins: [trackPlugin],
+    data: {
+      labels,
+      datasets: [{
+        label: 'Reciclagem',
+        data: values,
+        backgroundColor: colors,
+        borderRadius: 99,
+        barThickness: 14,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ` Reciclagem: ${ctx.parsed.x.toFixed(1)}%` } }
+      },
+      scales: {
+        x: { min: 0, max: 100, ticks: { font: { size: 11 }, callback: v => v + '%' }, grid: { color: gridColor, drawTicks: false }, border: { display: false } },
+        y: { ticks: { font: { size: 11 } }, grid: { color: gridColor, drawTicks: false }, border: { display: false } }
+      }
+    }
+  });
+})();
+
+// Unidades ativas por mês — linhas
+new Chart(document.getElementById('cUnidadesMes'), {
+  type: 'line',
+  data: {
+    labels: MESES,
+    datasets: [
+      { label: 'Unidades ativas', data: [10,10,10,10,10,10,9,9,9,9,12,13], borderColor: '#8AA5FF', backgroundColor: 'rgba(138,165,255,0.07)', fill: true, tension: 0.3, pointRadius: 3, pointBackgroundColor: '#8AA5FF', pointBorderColor: '#fff', pointBorderWidth: 1.5 },
+      { label: 'Transportadores', data: [6,6,5,6,5,3,3,3,3,3,3,4],         borderColor: '#FFBA86', backgroundColor: 'rgba(255,186,134,0.07)', fill: true, tension: 0.3, pointRadius: 3, pointBackgroundColor: '#FFBA86', pointBorderColor: '#fff', pointBorderWidth: 1.5, borderDash: [4,3] },
+      { label: 'Destinos Finais', data: [7,7,8,7,6,5,4,4,4,8,6,6],         borderColor: '#b35a00', backgroundColor: 'rgba(179,90,0,0.07)',    fill: true, tension: 0.3, pointRadius: 3, pointBackgroundColor: '#b35a00', pointBorderColor: '#fff', pointBorderWidth: 1.5, borderDash: [2,4] },
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y}` } } },
+    scales: {
+      x: { grid: { color: gridColor, drawTicks: false }, border: { display: false }, ticks: { font: { size: 11 }, autoSkip: false } },
+      y: { min: 0, max: 16, ticks: { font: { size: 11 }, stepSize: 2 }, grid: { drawTicks: false, color: 'rgba(0,0,0,0.06)' }, border: { display: false } }
+    }
+  }
+});
+
+// Heatmap — volume mensal por resíduo
+(function() {
+  const data = {
+    'Rejeito':    [3.07,0.77,0.72,1.74,1.28,1.39,1.66,0.92,1.19,1.45,19.39,13.49],
+    'Reciclável': [0.79,1.02,0.89,0.89,0.71,0.63,0.92,0.63,0.74,0.44,4.00,12.88],
+    'Orgânico':   [0.12,0.13,0.09,0.20,0.41,0.03,0.10,0.10,0.24,0.14,21.56,0.78],
+    'Papelão':    [0.67,0.52,0.54,0.43,1.09,0.67,0.50,0.34,0.43,0.37,0.23,17.61],
+    'Não Rec.':   [0,0,0,0,0,0,0,0,0.07,1.56,2.80,0]
+  };
+  const residuos = Object.keys(data);
+  const meses = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+  const allVals = Object.values(data).flat();
+  const maxVal = Math.max(...allVals);
+
+  function getColor(val) {
+    if (val === 0) return '#F5F5F5';
+    const t = Math.pow(val / maxVal, 0.45);
+    if (t < 0.4) {
+      const s = t / 0.4;
+      const r = Math.round(224 - (224 - 138) * s);
+      const g = Math.round(232 - (232 - 165) * s);
+      const b = 255;
+      return `rgb(${r},${g},${b})`;
+    } else {
+      const s = (t - 0.4) / 0.6;
+      const stops = [[255,229,210],[255,215,185],[255,201,159],[255,186,134],[219,152,101]];
+      const idx = Math.min(Math.floor(s * (stops.length - 1)), stops.length - 2);
+      const frac = s * (stops.length - 1) - idx;
+      const c0 = stops[idx], c1 = stops[idx + 1];
+      return `rgb(${Math.round(c0[0]+(c1[0]-c0[0])*frac)},${Math.round(c0[1]+(c1[1]-c0[1])*frac)},${Math.round(c0[2]+(c1[2]-c0[2])*frac)})`;
+    }
+  }
+
+  function textColor(val) {
+    const t = Math.pow(val / maxVal, 0.45);
+    return t > 0.75 ? '#fff' : '#222222';
+  }
+
+  const container = document.getElementById('heatmapGeral');
+  const labelW = 90;
+  const cellH = 44;
+
+  // Month row outside chart-inner
+  const monthRow = `<div style="display:table;width:100%;table-layout:fixed;font-size:11px;color:#888;font-family:'Inter',sans-serif;font-weight:400;padding:6px 0 4px 0">
+    <div style="display:table-row">
+      <div style="display:table-cell;width:${labelW}px"></div>
+      ${meses.map(m => `<div style="display:table-cell;text-align:center">${m}</div>`).join('')}
+    </div>
+  </div>`;
+  container.insertAdjacentHTML('afterend', monthRow);
+
+  let html = `<div style="overflow-x:auto">
+  <table style="width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed">
+    <tbody>`;
+
+  residuos.forEach(res => {
+    html += `<tr>
+      <td style="padding:8px;font-size:12px;font-weight:500;color:#222;white-space:nowrap;width:${labelW}px">${res}</td>
+      ${data[res].map(val => {
+        const bg = getColor(val);
+        const tc = textColor(val);
+        const display = val === 0 ? '—' : val.toFixed(2).replace('.',',') + 't';
+        return `<td style="padding:4px 3px;text-align:center;height:${cellH}px"><div style="background:${bg};color:${tc};border-radius:4px;padding:6px 2px;font-size:11px;font-family:'Inter',sans-serif;height:100%;display:flex;align-items:center;justify-content:center;cursor:default;transition:transform .15s ease,box-shadow .15s ease" onmouseover="this.style.transform='scale(1.08)';this.style.boxShadow='0 3px 8px rgba(0,0,0,0.18)';this.style.zIndex='10';this.style.position='relative'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.zIndex='';this.style.position=''">${display}</div></td>`;
+      }).join('')}
+    </tr>`;
+  });
+
+  html += `</tbody></table></div>`;
+  container.innerHTML = html;
+})();
+
+
+// CO₂ evitado por resíduo
+new Chart(document.getElementById('cCo2Bar'), {
+  type: 'line',
+  data: {
+    labels: MESES,
+    datasets: [
+      { label: 'Reciclável', data: [1.63,2.10,1.83,1.83,1.46,1.30,1.89,1.30,1.52,0.91,8.24,26.52], borderColor: '#8AA5FF', backgroundColor: 'transparent', tension: 0.3, pointRadius: 3, pointBackgroundColor: '#8AA5FF', pointBorderColor: '#fff', pointBorderWidth: 1.5 },
+      { label: 'Papelão',    data: [0.90,0.70,0.73,0.58,1.47,0.90,0.67,0.46,0.58,0.50,0.31,23.74], borderColor: '#bacaff', backgroundColor: 'transparent', tension: 0.3, pointRadius: 3, pointBackgroundColor: '#bacaff', pointBorderColor: '#fff', pointBorderWidth: 1.5 },
+      { label: 'Orgânico',   data: [0.05,0.05,0.04,0.08,0.17,0.01,0.04,0.04,0.10,0.06,9.06,0.33],  borderColor: '#FFBA86', backgroundColor: 'transparent', tension: 0.3, pointRadius: 3, pointBackgroundColor: '#FFBA86', pointBorderColor: '#fff', pointBorderWidth: 1.5 },
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y} tCO₂e` } } },
+    scales: {
+      x: { ticks: { font: { size: 11 }, autoSkip: false }, grid: { color: gridColor, drawTicks: false }, border: { display: false } },
+      y: { ticks: { font: { size: 11 }, callback: v => v + 't' }, grid: { color: gridColor, drawTicks: false }, border: { display: false } }
+    }
+  }
+});
+
+// Índice de Geração — volume mensal por tier (dados reais)
+new Chart(document.getElementById('cMensalTierNovo'), {
+  type: 'line',
+  data: {
+    labels: MESES,
+    datasets: [
+      { label: 'CD',     data: [null,null,null,null,null,null,null,null,null,null,null,41.25], borderColor: '#b35a00', backgroundColor: 'transparent', tension: 0.3, pointRadius: 3, pointBorderColor: '#fff', pointBorderWidth: 1.5, pointBackgroundColor: '#b35a00' },
+      { label: 'Hub',    data: [0.83,0.87,0.69,1.14,0.58,0.14,0.52,0.54,0.55,1.6,4.1,0.35],  borderColor: '#FFBA86', backgroundColor: 'transparent', tension: 0.3, pointRadius: 3, pointBorderColor: '#fff', pointBorderWidth: 1.5, pointBackgroundColor: '#FFBA86', borderDash: [3,3] },
+      { label: 'Tier A', data: [null,null,null,null,null,null,null,null,null,null,6.03,0.26],   borderColor: '#8AA5FF', backgroundColor: 'transparent', tension: 0.3, pointRadius: 3, pointBorderColor: '#fff', pointBorderWidth: 1.5, pointBackgroundColor: '#8AA5FF' },
+      { label: 'Tier B', data: [0.51,0.22,0.20,0.24,0.34,0.36,0.42,0.20,0.31,0.33,4.05,0.36], borderColor: '#bacaff', backgroundColor: 'transparent', tension: 0.3, pointRadius: 3, pointBorderColor: '#fff', pointBorderWidth: 1.5, pointBackgroundColor: '#bacaff', borderDash: [4,3] },
+      { label: 'Tier C', data: [0.26,0.09,0.11,0.22,0.29,0.14,0.18,0.14,0.20,0.24,2.50,0.17], borderColor: '#db9865', backgroundColor: 'transparent', tension: 0.3, pointRadius: 3, pointBorderColor: '#fff', pointBorderWidth: 1.5, pointBackgroundColor: '#db9865', borderDash: [2,4] },
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    spanGaps: true,
+    plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y} ton` } } },
+    scales: {
+      x: { ticks: { font: { size: 11 }, autoSkip: false } },
+      y: { type: 'logarithmic', ticks: { font: { size: 11 }, callback: v => [0.1,0.5,1,5,10,50].includes(v) ? v + 't' : '' }, grid: { color: gridColor, drawTicks: false }, border: { display: false } }
+    }
+  }
+});
+
+// Treemap — Volume por resíduo
+(function() {
+  const data = [
+    { label: 'Rejeito + Não Rec.', value: 51.43, color: '#db9865', pct: '42%' },
+    { label: 'Reciclável', value: 24.52, color: '#8AA5FF', pct: '20%' },
+    { label: 'Orgânico',   value: 23.93, color: '#FFBA86', pct: '19%' },
+    { label: 'Papelão',    value: 23.41, color: '#bacaff', pct: '19%' },
+  ];
+
+  function squarify(items, rect) {
+    const results = [];
+    function layout(nodes, x, y, w, h) {
+      if (!nodes.length) return;
+      if (nodes.length === 1) { results.push({ ...nodes[0], x, y, w, h }); return; }
+      const total = nodes.reduce((s, n) => s + n.value, 0);
+      let bestIdx = 1, bestRatio = Infinity;
+      for (let i = 1; i < nodes.length; i++) {
+        const a = nodes.slice(0, i).reduce((s, n) => s + n.value, 0);
+        const b = total - a;
+        const ratio = Math.max(a, b) / Math.min(a, b);
+        if (ratio < bestRatio) { bestRatio = ratio; bestIdx = i; }
+        else break;
+      }
+      const a = nodes.slice(0, bestIdx).reduce((s, n) => s + n.value, 0);
+      const frac = a / total;
+      const left = nodes.slice(0, bestIdx);
+      const right = nodes.slice(bestIdx);
+      if (w >= h) {
+        layout(left,  x,            y, w * frac,       h);
+        layout(right, x + w * frac, y, w * (1 - frac), h);
+      } else {
+        layout(left,  x, y,            w, h * frac);
+        layout(right, x, y + h * frac, w, h * (1 - frac));
+      }
+    }
+    layout(items, rect.x, rect.y, rect.w, rect.h);
+    return results;
+  }
+
+  function buildTreemap() {
+    const container = document.getElementById('treemapResiduos');
+    if (!container) return;
+    const W = container.offsetWidth || 460;
+    const H = 260;
+    const gap = 4;
+    const rects = squarify(data, { x: 0, y: 0, w: W, h: H });
+    let html = '';
+    rects.forEach(r => {
+      const rw = r.w - gap;
+      const rh = r.h - gap;
+      const showLabel = rw > 40 && rh > 24;
+      const showVal   = rw > 55 && rh > 46;
+      html += `<div style="position:absolute;left:${r.x}px;top:${r.y}px;width:${rw}px;height:${rh}px;background:${r.color};border-radius:5px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;overflow:hidden;padding:8px 10px;cursor:default;transition:transform .15s ease,box-shadow .15s ease" onmouseover="this.style.transform='scale(1.03)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)';this.style.zIndex='10'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.zIndex=''">
+        ${showLabel ? `<div style="font-size:11px;font-weight:600;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.25);line-height:1.3">${r.label}</div>` : ''}
+        ${showVal   ? `<div style="font-size:10px;color:rgba(255,255,255,0.8);margin-top:1px">${r.value.toFixed(2).replace('.',',')}t · ${r.pct}</div>` : ''}
+      </div>`;
+    });
+    container.style.position = 'relative';
+    container.innerHTML = html;
+  }
+
+  if (document.readyState === 'complete') setTimeout(buildTreemap, 50);
+  else window.addEventListener('load', () => setTimeout(buildTreemap, 50));
+})();
+</script>
+</body>
+</html>
